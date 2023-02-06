@@ -1,0 +1,72 @@
+﻿@page
+@model CSPharma_FinalVersion.Pages.VistasEstadoPedido.ViewListEstadoPedidoModel
+
+@{
+    ViewData["Title"] = "ViewListEstadoPedido";
+}
+
+<h1>ViewListEstadoPedido</h1>
+
+<p>
+    <a asp-page="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].MdUuid)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].MdDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].CodEstadoEnvio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].CodEstadoPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].CodEstadoDevolucion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].CodPedido)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].CodLinea)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.TdcTchEstadoPedido) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MdUuid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MdDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodEstadoEnvio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodEstadoPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodEstadoDevolucion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodPedido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodLinea)
+            </td>
+            <td>
+                <a asp-page="./Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-page="./Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-page="./Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
