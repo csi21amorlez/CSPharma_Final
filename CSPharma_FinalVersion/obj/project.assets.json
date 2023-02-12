@@ -10386,19 +10386,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\CSI21-Amorlez\\.nuget\\packages\\": {}
+    "C:\\Users\\Ángel Mora González\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\CSI21-Amorlez\\Desktop\\boring\\CSPharma_FinalVersion\\CSPharma_FinalVersion\\CSPharma_FinalVersion.csproj",
+      "projectUniqueName": "E:\\CSPharma\\CSPharma_Final\\CSPharma_Final\\CSPharma_FinalVersion\\CSPharma_FinalVersion.csproj",
       "projectName": "CSPharma_FinalVersion",
-      "projectPath": "C:\\Users\\CSI21-Amorlez\\Desktop\\boring\\CSPharma_FinalVersion\\CSPharma_FinalVersion\\CSPharma_FinalVersion.csproj",
-      "packagesPath": "C:\\Users\\CSI21-Amorlez\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\CSI21-Amorlez\\Desktop\\boring\\CSPharma_FinalVersion\\CSPharma_FinalVersion\\obj\\",
+      "projectPath": "E:\\CSPharma\\CSPharma_Final\\CSPharma_Final\\CSPharma_FinalVersion\\CSPharma_FinalVersion.csproj",
+      "packagesPath": "C:\\Users\\Ángel Mora González\\.nuget\\packages\\",
+      "outputPath": "E:\\CSPharma\\CSPharma_Final\\CSPharma_Final\\CSPharma_FinalVersion\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\CSI21-Amorlez\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ángel Mora González\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10412,8 +10417,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\CSI21-Amorlez\\Desktop\\boring\\CSPharma_FinalVersion\\DAL\\DAL.csproj": {
-              "projectPath": "C:\\Users\\CSI21-Amorlez\\Desktop\\boring\\CSPharma_FinalVersion\\DAL\\DAL.csproj"
+            "E:\\CSPharma\\CSPharma_Final\\CSPharma_Final\\DAL\\DAL.csproj": {
+              "projectPath": "E:\\CSPharma\\CSPharma_Final\\CSPharma_Final\\DAL\\DAL.csproj"
             }
           }
         }
@@ -10480,7 +10485,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
       }
     }
   }

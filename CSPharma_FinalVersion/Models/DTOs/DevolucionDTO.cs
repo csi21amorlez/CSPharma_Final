@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace DAL.DTOs
 {
-    internal class DevolucionDTO
+    /*
+     *DevolucionDTO --> Clase DTO para la clase entidad TdcCatEstadosDevolucionPedido
+    */
+    public class DevolucionDTO
     {
+        public string CodEstadoDevolucion { get; set; }
 
+        public String DesEstadoDevolucion { get; set; }
 
     }
 }

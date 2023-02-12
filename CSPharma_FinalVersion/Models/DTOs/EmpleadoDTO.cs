@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace DAL.DTOs
 {
-    internal class EmpleadoDTO
+    /*
+     * EmpleadoDTO--> Clase DTO para la clase entidad DlkCatAccEmpleado
+     */
+    public class EmpleadoDTO
     {
+        public string CodEmpleado { get; set; }
+        public string ClaveEmpleado { get; set; }
+        public short NivelAcceso { get; set; }
     }
 }

@@ -6,7 +6,20 @@ using System.Threading.Tasks;
 
 namespace DAL.DTOs
 {
-    internal class LineasDTO
+    /*
+     * LineasDTO --> Clase DTO para la clase entidad TdcCatLineasDistribucion
+     *  
+     */
+    public class LineasDTO
     {
+        public string CodLinea { get; set; }
+
+        public string CodProvincia { get; set; }
+    
+
+        public string CodMunicipio { get; set; }
+
+        public string CodBarrio { get; set; }
+
     }
 }

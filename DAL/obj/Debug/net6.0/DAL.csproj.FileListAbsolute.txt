@@ -12,3 +12,17 @@ C:\Users\CSI21-Amorlez\Desktop\boring\CSPharma_FinalVersion\DAL\obj\Debug\net6.0
 C:\Users\CSI21-Amorlez\Desktop\boring\CSPharma_FinalVersion\DAL\obj\Debug\net6.0\DAL.pdb
 C:\Users\CSI21-Amorlez\Desktop\boring\CSPharma_FinalVersion\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 C:\Users\CSI21-Amorlez\Desktop\boring\CSPharma_FinalVersion\DAL\obj\Debug\net6.0\ref\DAL.dll
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\bin\Debug\net6.0\DAL.deps.json
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\bin\Debug\net6.0\DAL.dll
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\bin\Debug\net6.0\DAL.pdb
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.dll
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\refint\DAL.dll
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.pdb
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+E:\CSPharma\CSPharma_Final\CSPharma_Final\DAL\obj\Debug\net6.0\ref\DAL.dll

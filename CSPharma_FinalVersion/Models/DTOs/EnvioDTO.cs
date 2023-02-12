@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace DAL.DTOs
 {
-    internal class EnvioDTO
+    /*
+     * EnvioDTO --> Clase DTO para la clase entidad TdcCatEstadosEnvioPedido
+     */
+
+    public class EnvioDTO
     {
+        public string CodEstadoEnvio { get; set; }
+
+        public string DesEstadoEnvio { get; set; }
+
     }
 }
