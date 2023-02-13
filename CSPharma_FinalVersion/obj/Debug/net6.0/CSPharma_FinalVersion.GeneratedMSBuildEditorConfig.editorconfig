@@ -5,68 +5,69 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CSPharma_FinalVersion
 build_property.RootNamespace = CSPharma_FinalVersion
-build_property.ProjectDir = E:\CSPharma\CSPharma_Final\CSPharma_Final\CSPharma_FinalVersion\
+build_property.ProjectDir = C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = E:\CSPharma\CSPharma_Final\CSPharma_Final\CSPharma_FinalVersion
+build_property.MSBuildProjectDirectory = C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion
 build_property._RazorSourceGeneratorDebug = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/Error.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/Index.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/Privacy.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEmpleado/ViewListEmpleado.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEmpleado/ViewListEmpleado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cVmlld0xpc3RFbXBsZWFkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/ViewListEstadoDevolucion.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/ViewListEstadoDevolucion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxWaWV3TGlzdEVzdGFkb0Rldm9sdWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/ViewListEstadoEnvio.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/ViewListEstadoEnvio.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cVmlld0xpc3RFc3RhZG9FbnZpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/ViewListEstadoLineasDistribucion.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/ViewListEstadoLineasDistribucion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXFZpZXdMaXN0RXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPago/ViewListEstadoPago.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPago/ViewListEstadoPago.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xWaWV3TGlzdEVzdGFkb1BhZ28uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPedido/ViewListEstadoPedido.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPedido/ViewListEstadoPedido.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXFZpZXdMaXN0RXN0YWRvUGVkaWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/_ViewImports.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/_ViewStart.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[E:/CSPharma/CSPharma_Final/CSPharma_Final/CSPharma_FinalVersion/Pages/Shared/_Layout.cshtml]
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-rb77pl2h67

@@ -96,6 +96,80 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         #region Conversores de listas
 
+        public List<TdcCatEstadosDevolucionPedido> ListDevolucionDtoToDao(List<DevolucionDTO> dto)
+        {
+            List<TdcCatEstadosDevolucionPedido> listDevoluciones = new List<TdcCatEstadosDevolucionPedido>();
+
+            foreach(DevolucionDTO item in dto)
+            {
+                listDevoluciones.Add(DevolucionDtoToDao(item));
+            }
+            
+            return listDevoluciones;
+        }
+
+        public List<TdcTchEstadoPedido> ListPedidosDtoToDao(List<EstadoPedidoDTO> dto)
+        {
+            List<TdcTchEstadoPedido> listEstadoPedidos = new List<TdcTchEstadoPedido>();
+
+            foreach(EstadoPedidoDTO item in dto)
+            {
+                listEstadoPedidos.Add(EstadoPedidoDtoToDao(item));
+            }
+
+            return listEstadoPedidos;
+        }
+
+        public List<TdcCatLineasDistribucion> ListLineasDtoToDao(List<LineasDTO> dto)
+        {
+            List<TdcCatLineasDistribucion> listLineas = new List<TdcCatLineasDistribucion>();
+
+            foreach(LineasDTO item in dto)
+            {
+                listLineas.Add(LineasDtoToDao(item));
+            }
+
+            return listLineas;
+                
+        }
+
+        public List<DlkCatAccEmpleado> ListEmpleadoDtoToDao(List<EmpleadoDTO> dto)
+        {
+            List<DlkCatAccEmpleado> listEmpleados = new List<DlkCatAccEmpleado>();
+
+            foreach(EmpleadoDTO item in dto)
+            {
+                listEmpleados.Add(EmpleadoDtoToDao(item));
+            }
+
+            return listEmpleados;
+
+        }
+
+        public List<TdcCatEstadosPagoPedido> ListEstadoPagoDtoToDao(List<PagoDTO> dto)
+        {
+            List<TdcCatEstadosPagoPedido> listEstadoPago = new List<TdcCatEstadosPagoPedido>();
+
+            foreach(PagoDTO item in dto)
+            {
+                listEstadoPago.Add(PagoDtoToDao(item));
+            }
+
+            return listEstadoPago;
+        }
+
+        public List<TdcCatEstadosEnvioPedido> ListEnvioDtoToDao(List<EnvioDTO> dto)
+        {
+            List<TdcCatEstadosEnvioPedido> listEnvios = new List<TdcCatEstadosEnvioPedido>();
+
+            foreach(EnvioDTO item in dto)
+            {
+                listEnvios.Add(EnvioDtoToDao(item));
+            }
+
+            return listEnvios;
+        }
+
 
         #endregion 
 
