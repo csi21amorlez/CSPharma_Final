@@ -7,7 +7,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
     {
         #region Conversores individuales
 
-        public DlkCatAccEmpleado EmpleadoDtoToDao(EmpleadoDTO dto)
+        public static DlkCatAccEmpleado EmpleadoDtoToDao(EmpleadoDTO dto)
         {
             DlkCatAccEmpleado empleado = new DlkCatAccEmpleado();
 
@@ -19,7 +19,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return empleado;
         }
 
-        public TdcCatEstadosDevolucionPedido DevolucionDtoToDao(DevolucionDTO dto)
+        public static TdcCatEstadosDevolucionPedido DevolucionDtoToDao(DevolucionDTO dto)
         {
             TdcCatEstadosDevolucionPedido devolucion = new TdcCatEstadosDevolucionPedido();
 
@@ -31,7 +31,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return devolucion;
         }
 
-        public TdcCatEstadosEnvioPedido EnvioDtoToDao(EnvioDTO dto)
+        public static TdcCatEstadosEnvioPedido EnvioDtoToDao(EnvioDTO dto)
         {
             TdcCatEstadosEnvioPedido envio = new TdcCatEstadosEnvioPedido();
 
@@ -43,7 +43,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return envio;
         }
 
-        public TdcCatEstadosPagoPedido PagoDtoToDao(PagoDTO dto)
+        public static TdcCatEstadosPagoPedido PagoDtoToDao(PagoDTO dto)
         {
             TdcCatEstadosPagoPedido pago = new TdcCatEstadosPagoPedido();
 
@@ -56,7 +56,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         }
 
-        public TdcCatLineasDistribucion LineasDtoToDao(LineasDTO dto)
+        public static TdcCatLineasDistribucion LineasDtoToDao(LineasDTO dto)
         {
             TdcCatLineasDistribucion lineas = new TdcCatLineasDistribucion();
 
@@ -72,7 +72,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         }
 
-        public TdcTchEstadoPedido EstadoPedidoDtoToDao(EstadoPedidoDTO dto)
+        public static TdcTchEstadoPedido EstadoPedidoDtoToDao(EstadoPedidoDTO dto)
         {
             TdcTchEstadoPedido estadoPedido = new TdcTchEstadoPedido();
 
@@ -85,7 +85,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             estadoPedido.CodEstadoDevolucion = dto.CodEstadoDevolucion;
 
             return estadoPedido;
-        
+
         }
 
 
@@ -96,23 +96,23 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         #region Conversores de listas
 
-        public List<TdcCatEstadosDevolucionPedido> ListDevolucionDtoToDao(List<DevolucionDTO> dto)
+        public static List<TdcCatEstadosDevolucionPedido> ListDevolucionDtoToDao(List<DevolucionDTO> dto)
         {
             List<TdcCatEstadosDevolucionPedido> listDevoluciones = new List<TdcCatEstadosDevolucionPedido>();
 
-            foreach(DevolucionDTO item in dto)
+            foreach (DevolucionDTO item in dto)
             {
                 listDevoluciones.Add(DevolucionDtoToDao(item));
             }
-            
+
             return listDevoluciones;
         }
 
-        public List<TdcTchEstadoPedido> ListPedidosDtoToDao(List<EstadoPedidoDTO> dto)
+        public static List<TdcTchEstadoPedido> ListPedidosDtoToDao(List<EstadoPedidoDTO> dto)
         {
             List<TdcTchEstadoPedido> listEstadoPedidos = new List<TdcTchEstadoPedido>();
 
-            foreach(EstadoPedidoDTO item in dto)
+            foreach (EstadoPedidoDTO item in dto)
             {
                 listEstadoPedidos.Add(EstadoPedidoDtoToDao(item));
             }
@@ -120,24 +120,24 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return listEstadoPedidos;
         }
 
-        public List<TdcCatLineasDistribucion> ListLineasDtoToDao(List<LineasDTO> dto)
+        public static List<TdcCatLineasDistribucion> ListLineasDtoToDao(List<LineasDTO> dto)
         {
             List<TdcCatLineasDistribucion> listLineas = new List<TdcCatLineasDistribucion>();
 
-            foreach(LineasDTO item in dto)
+            foreach (LineasDTO item in dto)
             {
                 listLineas.Add(LineasDtoToDao(item));
             }
 
             return listLineas;
-                
+
         }
 
-        public List<DlkCatAccEmpleado> ListEmpleadoDtoToDao(List<EmpleadoDTO> dto)
+        public static List<DlkCatAccEmpleado> ListEmpleadoDtoToDao(List<EmpleadoDTO> dto)
         {
             List<DlkCatAccEmpleado> listEmpleados = new List<DlkCatAccEmpleado>();
 
-            foreach(EmpleadoDTO item in dto)
+            foreach (EmpleadoDTO item in dto)
             {
                 listEmpleados.Add(EmpleadoDtoToDao(item));
             }
@@ -146,11 +146,11 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         }
 
-        public List<TdcCatEstadosPagoPedido> ListEstadoPagoDtoToDao(List<PagoDTO> dto)
+        public static List<TdcCatEstadosPagoPedido> ListEstadoPagoDtoToDao(List<PagoDTO> dto)
         {
             List<TdcCatEstadosPagoPedido> listEstadoPago = new List<TdcCatEstadosPagoPedido>();
 
-            foreach(PagoDTO item in dto)
+            foreach (PagoDTO item in dto)
             {
                 listEstadoPago.Add(PagoDtoToDao(item));
             }
@@ -158,11 +158,11 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return listEstadoPago;
         }
 
-        public List<TdcCatEstadosEnvioPedido> ListEnvioDtoToDao(List<EnvioDTO> dto)
+        public static List<TdcCatEstadosEnvioPedido> ListEnvioDtoToDao(List<EnvioDTO> dto)
         {
             List<TdcCatEstadosEnvioPedido> listEnvios = new List<TdcCatEstadosEnvioPedido>();
 
-            foreach(EnvioDTO item in dto)
+            foreach (EnvioDTO item in dto)
             {
                 listEnvios.Add(EnvioDtoToDao(item));
             }

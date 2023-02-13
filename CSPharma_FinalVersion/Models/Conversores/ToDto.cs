@@ -3,10 +3,10 @@ using DAL.Models;
 
 namespace CSPharma_FinalVersion.Models.Conversores
 {
-    public class ToDtoImpl
+    public class ToDto
     {
         #region Conversores individuales
-        EstadoPedidoDTO EstadoPedidoToDto(TdcTchEstadoPedido pedido)
+        public static EstadoPedidoDTO EstadoPedidoToDto(TdcTchEstadoPedido pedido)
         {
             EstadoPedidoDTO dto = new EstadoPedidoDTO();
 
@@ -19,7 +19,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        DevolucionDTO DevolucionToDto(TdcCatEstadosDevolucionPedido devolucion)
+        public static DevolucionDTO DevolucionToDto(TdcCatEstadosDevolucionPedido devolucion)
         {
             DevolucionDTO dto = new DevolucionDTO();
 
@@ -29,7 +29,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        EmpleadoDTO EmpleadoToDto(DlkCatAccEmpleado empleado)
+        public static EmpleadoDTO EmpleadoToDto(DlkCatAccEmpleado empleado)
         {
             EmpleadoDTO dto = new EmpleadoDTO();
 
@@ -40,7 +40,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        EnvioDTO EnvioToDto(TdcCatEstadosEnvioPedido envio)
+        public static EnvioDTO EnvioToDto(TdcCatEstadosEnvioPedido envio)
         {
             EnvioDTO dto = new EnvioDTO();
 
@@ -50,7 +50,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        LineasDTO LineasToDto(TdcCatLineasDistribucion lineas)
+        public static LineasDTO LineasToDto(TdcCatLineasDistribucion lineas)
         {
             LineasDTO dto = new LineasDTO();
 
@@ -62,7 +62,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        PagoDTO PagoToDto(TdcCatEstadosPagoPedido pago)
+        public static PagoDTO PagoToDto(TdcCatEstadosPagoPedido pago)
         {
             PagoDTO dto = new PagoDTO();
 
@@ -79,7 +79,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
 
 
-        List<DevolucionDTO> ListDevolucionToDto(List<TdcCatEstadosDevolucionPedido> devoluciones)
+        public static List<DevolucionDTO> ListDevolucionToDto(IList<TdcCatEstadosDevolucionPedido> devoluciones)
         {
             List<DevolucionDTO> dto = new List<DevolucionDTO>();
 
@@ -90,7 +90,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         }
 
-        List<EmpleadoDTO> ListEmpleadoToDto(List<DlkCatAccEmpleado> empleados)
+        public static List<EmpleadoDTO> ListEmpleadoToDto(IList<DlkCatAccEmpleado> empleados)
         {
             List<EmpleadoDTO> dto = new List<EmpleadoDTO>();
 
@@ -100,7 +100,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        List<EnvioDTO> ListEnvioToDto(List<TdcCatEstadosEnvioPedido> envios)
+        public static List<EnvioDTO> ListEnvioToDto(IList<TdcCatEstadosEnvioPedido> envios)
         {
             List<EnvioDTO> dto = new List<EnvioDTO>();
 
@@ -110,7 +110,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        List<EstadoPedidoDTO> ListEstadoPedidoToDto(List<TdcTchEstadoPedido> pedidos)
+        public static List<EstadoPedidoDTO> ListEstadoPedidoToDto(IList<TdcTchEstadoPedido> pedidos)
         {
             List<EstadoPedidoDTO> dto = new List<EstadoPedidoDTO>();
 
@@ -120,7 +120,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        List<LineasDTO> ListLineasToDto(List<TdcCatLineasDistribucion> lineas)
+        public static List<LineasDTO> ListLineasToDto(IList<TdcCatLineasDistribucion> lineas)
         {
             List<LineasDTO> dto = new List<LineasDTO>();
 
@@ -130,7 +130,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return dto;
         }
 
-        List<PagoDTO> ListPagoToDto(List<TdcCatEstadosPagoPedido> pagos)
+        public static List<PagoDTO> ListPagoToDto(IList<TdcCatEstadosPagoPedido> pagos)
         {
             List<PagoDTO> dto = new List<PagoDTO>();
 
