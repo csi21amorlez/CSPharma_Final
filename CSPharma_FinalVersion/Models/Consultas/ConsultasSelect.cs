@@ -8,34 +8,34 @@ namespace CSPharma_FinalVersion.Models.Consultas
     public class ConsultasSelect
     {
         //Declaramos el contexto en global para usarlo en todos los metodos
-        CspharmaInformacionalContext context = new CspharmaInformacionalContext();
+        static CspharmaInformacionalContext context = new CspharmaInformacionalContext();
 
-        public List<EmpleadoDTO> FindAllEmpleados()
+        public static List<EmpleadoDTO> FindAllEmpleados()
         {
             return ToDto.ListEmpleadoToDto(context.DlkCatAccEmpleados.ToList()); ;
         }
 
-        public List<DevolucionDTO> FindAllDevoluciones()
+        public static List<DevolucionDTO> FindAllDevoluciones()
         {
             return ToDto.ListDevolucionToDto(context.TdcCatEstadosDevolucionPedidos.ToList());
         }
 
-        public List<EnvioDTO> FindAllEnvios()
+        public static List<EnvioDTO> FindAllEnvios()
         {
             return ToDto.ListEnvioToDto(context.TdcCatEstadosEnvioPedidos.ToList());
         }
 
-        public List<EstadoPedidoDTO> FindAllEstadoPedido()
+        public static List<EstadoPedidoDTO> FindAllEstadoPedido()
         {
             return ToDto.ListEstadoPedidoToDto(context.TdcTchEstadoPedidos.ToList());
         }
 
-        public List<LineasDTO> FindAllLineas()
+        public  static List<LineasDTO> FindAllLineas()
         {
             return ToDto.ListLineasToDto(context.TdcCatLineasDistribucions.ToList());
         }
 
-        public List<PagoDTO> FindAllPagos()
+        public static List<PagoDTO> FindAllPagos()
         {
             return ToDto.ListPagoToDto(context.TdcCatEstadosPagoPedidos.ToList());
         }

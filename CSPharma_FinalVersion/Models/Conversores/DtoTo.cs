@@ -96,7 +96,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         #region Conversores de listas
 
-        public static List<TdcCatEstadosDevolucionPedido> ListDevolucionDtoToDao(List<DevolucionDTO> dto)
+        public static List<TdcCatEstadosDevolucionPedido> ListDevolucionDtoToDao(IList<DevolucionDTO> dto)
         {
             List<TdcCatEstadosDevolucionPedido> listDevoluciones = new List<TdcCatEstadosDevolucionPedido>();
 
@@ -108,7 +108,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return listDevoluciones;
         }
 
-        public static List<TdcTchEstadoPedido> ListPedidosDtoToDao(List<EstadoPedidoDTO> dto)
+        public static List<TdcTchEstadoPedido> ListPedidosDtoToDao(IList<EstadoPedidoDTO> dto)
         {
             List<TdcTchEstadoPedido> listEstadoPedidos = new List<TdcTchEstadoPedido>();
 
@@ -120,7 +120,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return listEstadoPedidos;
         }
 
-        public static List<TdcCatLineasDistribucion> ListLineasDtoToDao(List<LineasDTO> dto)
+        public static List<TdcCatLineasDistribucion> ListLineasDtoToDao(IList<LineasDTO> dto)
         {
             List<TdcCatLineasDistribucion> listLineas = new List<TdcCatLineasDistribucion>();
 
@@ -133,7 +133,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         }
 
-        public static List<DlkCatAccEmpleado> ListEmpleadoDtoToDao(List<EmpleadoDTO> dto)
+        public static List<DlkCatAccEmpleado> ListEmpleadoDtoToDao(IList<EmpleadoDTO> dto)
         {
             List<DlkCatAccEmpleado> listEmpleados = new List<DlkCatAccEmpleado>();
 
@@ -146,7 +146,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
         }
 
-        public static List<TdcCatEstadosPagoPedido> ListEstadoPagoDtoToDao(List<PagoDTO> dto)
+        public static List<TdcCatEstadosPagoPedido> ListEstadoPagoDtoToDao(IList<PagoDTO> dto)
         {
             List<TdcCatEstadosPagoPedido> listEstadoPago = new List<TdcCatEstadosPagoPedido>();
 
@@ -158,7 +158,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return listEstadoPago;
         }
 
-        public static List<TdcCatEstadosEnvioPedido> ListEnvioDtoToDao(List<EnvioDTO> dto)
+        public static List<TdcCatEstadosEnvioPedido> ListEnvioDtoToDao(IList<EnvioDTO> dto)
         {
             List<TdcCatEstadosEnvioPedido> listEnvios = new List<TdcCatEstadosEnvioPedido>();
 
