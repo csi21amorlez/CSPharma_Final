@@ -12,6 +12,7 @@ namespace DAL.DTOs {
 
     public class PagoDTO
     {
+        public long Id { get; set; }
         public string CodEstadoPago { get; set; }
 
         public string DesEstadoPago { get; set; }

@@ -1,9 +1,10 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 
 namespace DAL.Models;
 
-public partial class DlkCatAccEmpleado
+public partial class DlkCatAccEmpleado 
 {
     public string MdUuid { get; set; } = null!;
 

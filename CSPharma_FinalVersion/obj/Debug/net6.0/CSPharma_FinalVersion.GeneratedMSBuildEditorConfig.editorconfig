@@ -32,28 +32,128 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEmpleado/ViewListEmpleado.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cVmlld0xpc3RFbXBsZWFkby5jc2h0bWw=
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEmpleado/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEmpleado/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEmpleado/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEmpleado/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEmpleado/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/ViewListEstadoDevolucion.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxWaWV3TGlzdEVzdGFkb0Rldm9sdWNpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/ViewListEstadoEnvio.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cVmlld0xpc3RFc3RhZG9FbnZpby5jc2h0bWw=
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/ViewListEstadoLineasDistribucion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXFZpZXdMaXN0RXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uLmNzaHRtbA==
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPago/ViewListEstadoPago.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xWaWV3TGlzdEVzdGFkb1BhZ28uY3NodG1s
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPedido/ViewListEstadoPedido.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXFZpZXdMaXN0RXN0YWRvUGVkaWRvLmNzaHRtbA==
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPago/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPago/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPago/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPago/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPago/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/CSI21-Amorlez/Documents/CspharmaFinal/CSPharma_Final/CSPharma_FinalVersion/Pages/_ViewImports.cshtml]

@@ -4,17 +4,18 @@ using DAL.Models;
 
 namespace CSPharma_FinalVersion.Models.Consultas
 {
+   
     public class ConsultasInsert
     {
-        CspharmaInformacionalContext context = new CspharmaInformacionalContext();
-
+        private CspharmaInformacionalContext context = new CspharmaInformacionalContext();
         public void InsertarEnvio(EnvioDTO envio)
-        {
+        {            
             context.TdcCatEstadosEnvioPedidos.Add(DtoTo.EnvioDtoToDao(envio));
         }
 
         public void InsertarEmpleado(EmpleadoDTO empleado)
         {
+            Console.WriteLine(empleado.CodEmpleado);
             context.DlkCatAccEmpleados.Add(DtoTo.EmpleadoDtoToDao(empleado));
         }
 

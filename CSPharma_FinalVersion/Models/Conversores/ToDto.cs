@@ -1,4 +1,5 @@
-﻿using DAL.DTOs;
+﻿using CSPharma_FinalVersion.Models.Lógica;
+using DAL.DTOs;
 using DAL.Models;
 
 namespace CSPharma_FinalVersion.Models.Conversores
@@ -10,6 +11,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             EstadoPedidoDTO dto = new EstadoPedidoDTO();
 
+            dto.Id = pedido.Id;
             dto.CodPedido = pedido.CodPedido;
             dto.CodEstadoPago = pedido.CodEstadoPago;
             dto.CodEstadoEnvio = pedido.CodEstadoEnvio;
@@ -34,7 +36,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             EmpleadoDTO dto = new EmpleadoDTO();
 
             dto.CodEmpleado = empleado.CodEmpleado;
-            dto.ClaveEmpleado = empleado.ClaveEmpleado;
+            dto.ClaveEmpleado = Encriptador.Desencriptar(empleado.ClaveEmpleado, "EstaEsLaStringParaEncriptarLasContraseñasYDemásDatosQueSeTienenQueOcultasPorqueSomosMuyProfesionales");
             dto.NivelAcceso = empleado.NivelAcceso;
 
             return dto;

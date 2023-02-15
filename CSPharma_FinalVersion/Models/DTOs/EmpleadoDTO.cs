@@ -11,6 +11,7 @@ namespace DAL.DTOs
      */
     public class EmpleadoDTO
     {
+        public long Id { get; set; }
         public string CodEmpleado { get; set; }
         public string ClaveEmpleado { get; set; }
         public short NivelAcceso { get; set; }

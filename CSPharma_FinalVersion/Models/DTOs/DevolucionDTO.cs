@@ -11,6 +11,7 @@ namespace DAL.DTOs
     */
     public class DevolucionDTO
     {
+        public long Id { get; set; }
         public string CodEstadoDevolucion { get; set; }
 
         public String DesEstadoDevolucion { get; set; }

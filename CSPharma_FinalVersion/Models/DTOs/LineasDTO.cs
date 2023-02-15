@@ -12,6 +12,7 @@ namespace DAL.DTOs
      */
     public class LineasDTO
     {
+        public long ID { get; set; }
         public string CodLinea { get; set; }
 
         public string CodProvincia { get; set; }

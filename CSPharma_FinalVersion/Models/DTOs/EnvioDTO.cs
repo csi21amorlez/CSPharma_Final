@@ -12,6 +12,7 @@ namespace DAL.DTOs
 
     public class EnvioDTO
     {
+        public long Id { get; set; }
         public string CodEstadoEnvio { get; set; }
 
         public string DesEstadoEnvio { get; set; }

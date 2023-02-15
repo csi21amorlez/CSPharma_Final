@@ -1,11 +1,16 @@
-﻿using DAL.DTOs;
+﻿using CSPharma_FinalVersion.Models.Lógica;
+using DAL.DTOs;
 using DAL.Models;
+using System.Configuration;
+using System.Text.Json.Serialization;
 
 namespace CSPharma_FinalVersion.Models.Conversores
 {
     public class DtoTo
     {
         #region Conversores individuales
+
+
 
         public static DlkCatAccEmpleado EmpleadoDtoToDao(EmpleadoDTO dto)
         {
@@ -14,7 +19,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             empleado.MdUuid = Guid.NewGuid().ToString();
             empleado.MdDate = DateTime.Now;
             empleado.CodEmpleado = dto.CodEmpleado;
-            empleado.ClaveEmpleado = dto.ClaveEmpleado;
+            empleado.ClaveEmpleado = Encriptador.Encriptar(dto.ClaveEmpleado, "EstaEsLaStringParaEncriptarLasContraseñasYDemásDatosQueSeTienenQueOcultasPorqueSomosMuyProfesionales");
 
             return empleado;
         }
@@ -23,6 +28,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             TdcCatEstadosDevolucionPedido devolucion = new TdcCatEstadosDevolucionPedido();
 
+            devolucion.Id = dto.Id;
             devolucion.MdUuid = Guid.NewGuid().ToString();
             devolucion.MdDate = DateTime.Now;
             devolucion.CodEstadoDevolucion = dto.CodEstadoDevolucion;
@@ -35,6 +41,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             TdcCatEstadosEnvioPedido envio = new TdcCatEstadosEnvioPedido();
 
+            envio.Id = dto.Id;
             envio.MdUuid = Guid.NewGuid().ToString();
             envio.MdDate = DateTime.Now;
             envio.DesEstadoEnvio = dto.DesEstadoEnvio;
@@ -47,6 +54,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             TdcCatEstadosPagoPedido pago = new TdcCatEstadosPagoPedido();
 
+            pago.Id = dto.Id;
             pago.MdUuid = Guid.NewGuid().ToString();
             pago.MdDate = DateTime.Now;
             pago.DesEstadoPago = dto.DesEstadoPago;
@@ -60,6 +68,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             TdcCatLineasDistribucion lineas = new TdcCatLineasDistribucion();
 
+            lineas.Id = dto.ID;
             lineas.MdUuid = Guid.NewGuid().ToString();
             lineas.MdDate = DateTime.Now;
             lineas.CodLinea = dto.CodLinea;
@@ -76,6 +85,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             TdcTchEstadoPedido estadoPedido = new TdcTchEstadoPedido();
 
+            estadoPedido.Id = dto.Id;
             estadoPedido.MdUuid = Guid.NewGuid().ToString();
             estadoPedido.MdDate = DateTime.Now;
             estadoPedido.CodLinea = dto.CodLinea;

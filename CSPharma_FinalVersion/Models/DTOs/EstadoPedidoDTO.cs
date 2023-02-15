@@ -11,6 +11,7 @@ namespace DAL.DTOs
      */
     public class EstadoPedidoDTO
     {
+        public long Id { get; set; }
         public string CodEstadoEnvio { get; set; }
         
         public string CodEstadoPago { get; set; }

@@ -587,3 +587,7 @@ C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVers
 C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\obj\Debug\net6.0\CSPharma_FinalVersion.pdb
 C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\obj\Debug\net6.0\CSPharma_FinalVersion.genruntimeconfig.cache
 C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\obj\Debug\net6.0\ref\CSPharma_FinalVersion.dll
+C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\bin\Debug\net6.0\EntityFramework.SqlServer.dll
+C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\bin\Debug\net6.0\EntityFramework.dll
+C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.AspNet.Identity.EntityFramework.dll
