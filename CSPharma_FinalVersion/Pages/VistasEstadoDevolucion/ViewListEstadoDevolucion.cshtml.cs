@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
 using DAL.DTOs;
-using CSPharma_FinalVersion.Models.Consultas;
+
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
 {
@@ -19,7 +19,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
         {
 
 
-            TdcCatEstadosDevolucionPedido = ConsultasSelect.FindAllDevoluciones();
+            //TdcCatEstadosDevolucionPedido = ConsultasSelect.FindAllDevoluciones();
 
         }
     }
