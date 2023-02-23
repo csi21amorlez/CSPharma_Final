@@ -7,12 +7,15 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {
     public class EditModel : PageModel
     {
         private readonly DAL.Models.CspharmaInformacionalContext _context;
+        private DlkCatAccEmpleado dao;
 
         public EditModel(DAL.Models.CspharmaInformacionalContext context)
         {
@@ -20,7 +23,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
         }
 
         [BindProperty]
-        public DlkCatAccEmpleado DlkCatAccEmpleado { get; set; } = default!;
+        public EmpleadoDTO DlkCatAccEmpleado { get; set; } = new EmpleadoDTO();
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -29,12 +32,14 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
                 return NotFound();
             }
 
-            var dlkcataccempleado =  await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
+            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
+            
             if (dlkcataccempleado == null)
             {
                 return NotFound();
             }
-            DlkCatAccEmpleado = dlkcataccempleado;
+            dao = dlkcataccempleado;
+            DlkCatAccEmpleado = ToDto.EmpleadoToDto(dlkcataccempleado);         
             return Page();
         }
 
@@ -46,8 +51,8 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
             {
                 return Page();
             }
-
-            _context.Attach(DlkCatAccEmpleado).State = EntityState.Modified;
+             dao = DtoTo.EmpleadoDtoToDao(DlkCatAccEmpleado);
+            _context.Attach(dao).State = EntityState.Modified;
 
             try
             {
@@ -55,7 +60,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
             }
             catch (DbUpdateConcurrencyException)
             {
-                if (!DlkCatAccEmpleadoExists(DlkCatAccEmpleado.Id))
+                if (!DlkCatAccEmpleadoExists(dao.Id))
                 {
                     return NotFound();
                 }
@@ -70,7 +75,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 
         private bool DlkCatAccEmpleadoExists(long id)
         {
-          return _context.DlkCatAccEmpleados.Any(e => e.Id == id);
+            return _context.DlkCatAccEmpleados.Any(e => e.Id == id);
         }
     }
 }

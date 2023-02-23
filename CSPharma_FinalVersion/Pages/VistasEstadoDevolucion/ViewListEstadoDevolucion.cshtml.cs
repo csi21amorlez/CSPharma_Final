@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
-using DAL.DTOs;
+using Models.DTOs;
 
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion

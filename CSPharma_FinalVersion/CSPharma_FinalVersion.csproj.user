@@ -11,7 +11,7 @@
     <WebStackScaffolding_DbContextTypeFullName>DAL.Models.CspharmaInformacionalContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_ViewDialogWidth>650</WebStackScaffolding_ViewDialogWidth>
-    <RazorPage_SelectedScaffolderID>ModelBasedCrudRazorPageScaffolder</RazorPage_SelectedScaffolderID>
+    <RazorPage_SelectedScaffolderID>ModelBasedRazorPageScaffolder</RazorPage_SelectedScaffolderID>
     <RazorPage_SelectedScaffolderCategoryPath>root/Common/RazorPage</RazorPage_SelectedScaffolderCategoryPath>
     <NameOfLastUsedPublishProfile>C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\CSPharma_FinalVersion\Properties\PublishProfiles\FolderProfile.pubxml</NameOfLastUsedPublishProfile>
     <Controller_SelectedScaffolderID>ModelBasedRazorPageScaffolder</Controller_SelectedScaffolderID>

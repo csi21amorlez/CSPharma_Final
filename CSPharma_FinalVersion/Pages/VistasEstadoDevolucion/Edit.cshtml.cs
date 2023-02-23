@@ -12,13 +12,14 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
 {
     public class EditModel : PageModel
     {
-        private readonly DAL.Models.CspharmaInformacionalContext _context;
-
         public EditModel(DAL.Models.CspharmaInformacionalContext context)
         {
             _context = context;
         }
 
+        private readonly DAL.Models.CspharmaInformacionalContext _context;
+
+        
         [BindProperty]
         public TdcCatEstadosDevolucionPedido TdcCatEstadosDevolucionPedido { get; set; } = default!;
 

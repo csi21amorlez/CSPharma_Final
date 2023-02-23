@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.DTOs
+namespace Models.DTOs
 {
     /*
      * PedidoDTO --> Clase DTO para la clase entidad TdcTchEstadoPedido

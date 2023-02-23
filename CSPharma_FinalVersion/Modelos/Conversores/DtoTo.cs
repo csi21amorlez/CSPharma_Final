@@ -1,5 +1,5 @@
 ﻿using CSPharma_FinalVersion.Models.Lógica;
-using DAL.DTOs;
+using Models.DTOs;
 using DAL.Models;
 using System.Configuration;
 using System.Text.Json.Serialization;
@@ -16,8 +16,8 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             DlkCatAccEmpleado empleado = new DlkCatAccEmpleado();
 
-            empleado.MdUuid = Guid.NewGuid().ToString();
-            empleado.MdDate = DateTime.Now;
+            empleado.MdUuid = dto.MdUuid;
+            empleado.MdDate = dto.MdDate;
             empleado.CodEmpleado = dto.CodEmpleado;
             empleado.ClaveEmpleado = Encriptador.Encriptar(dto.ClaveEmpleado, "EstaEsLaStringParaEncriptarLasContraseñasYDemásDatosQueSeTienenQueOcultasPorqueSomosMuyProfesionales");
 

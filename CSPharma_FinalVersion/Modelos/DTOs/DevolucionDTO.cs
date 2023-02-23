@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAL.DTOs
+namespace Models.DTOs
 {
     /*
      *DevolucionDTO --> Clase DTO para la clase entidad TdcCatEstadosDevolucionPedido

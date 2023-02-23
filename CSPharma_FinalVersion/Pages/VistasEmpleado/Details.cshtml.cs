@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
 using CSPharma_FinalVersion.Models.Conversores;
-using DAL.DTOs;
+using Models.DTOs;
 
 namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {

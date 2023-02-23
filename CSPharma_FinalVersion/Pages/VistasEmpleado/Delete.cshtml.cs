@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {
@@ -19,7 +21,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
         }
 
         [BindProperty]
-      public DlkCatAccEmpleado DlkCatAccEmpleado { get; set; }
+        public EmpleadoDTO DlkCatAccEmpleado { get; set; }
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -28,13 +30,14 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
                 return NotFound();
             }
 
-            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
+            var dlkcataccempleado = ToDto.EmpleadoToDto(await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id));
+
 
             if (dlkcataccempleado == null)
             {
                 return NotFound();
             }
-            else 
+            else
             {
                 DlkCatAccEmpleado = dlkcataccempleado;
             }
@@ -51,8 +54,8 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 
             if (dlkcataccempleado != null)
             {
-                DlkCatAccEmpleado = dlkcataccempleado;
-                _context.DlkCatAccEmpleados.Remove(DlkCatAccEmpleado);
+
+                _context.DlkCatAccEmpleados.Remove(dlkcataccempleado);
                 await _context.SaveChangesAsync();
             }
 
