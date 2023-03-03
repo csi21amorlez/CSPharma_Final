@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoLineasDistribucion
 {
@@ -18,7 +20,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoLineasDistribucion
             _context = context;
         }
 
-      public TdcCatLineasDistribucion TdcCatLineasDistribucion { get; set; }
+      public LineasDTO TdcCatLineasDistribucion { get; set; }
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -34,7 +36,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoLineasDistribucion
             }
             else 
             {
-                TdcCatLineasDistribucion = tdccatlineasdistribucion;
+                TdcCatLineasDistribucion = ToDto.LineasToDto(tdccatlineasdistribucion);
             }
             return Page();
         }

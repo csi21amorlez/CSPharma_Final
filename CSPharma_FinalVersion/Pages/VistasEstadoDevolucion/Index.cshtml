@@ -14,12 +14,6 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.TdcCatEstadosDevolucionPedido[0].MdUuid)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TdcCatEstadosDevolucionPedido[0].MdDate)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.TdcCatEstadosDevolucionPedido[0].CodEstadoDevolucion)
             </th>
             <th>
@@ -31,12 +25,6 @@
     <tbody>
 @foreach (var item in Model.TdcCatEstadosDevolucionPedido) {
         <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.MdUuid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MdDate)
-            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CodEstadoDevolucion)
             </td>

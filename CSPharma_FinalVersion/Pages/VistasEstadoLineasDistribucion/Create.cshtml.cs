@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoLineasDistribucion
 {
@@ -24,7 +26,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoLineasDistribucion
         }
 
         [BindProperty]
-        public TdcCatLineasDistribucion TdcCatLineasDistribucion { get; set; }
+        public LineasDTO TdcCatLineasDistribucion { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -35,7 +37,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoLineasDistribucion
                 return Page();
             }
 
-            _context.TdcCatLineasDistribucions.Add(TdcCatLineasDistribucion);
+            _context.TdcCatLineasDistribucions.Add(DtoTo.LineasDtoToDao(TdcCatLineasDistribucion));
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

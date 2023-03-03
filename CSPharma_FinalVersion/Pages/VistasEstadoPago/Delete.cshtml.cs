@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoPago
 {
@@ -19,7 +21,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPago
         }
 
         [BindProperty]
-      public TdcCatEstadosPagoPedido TdcCatEstadosPagoPedido { get; set; }
+      public PagoDTO TdcCatEstadosPagoPedido { get; set; }
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -28,7 +30,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPago
                 return NotFound();
             }
 
-            var tdccatestadospagopedido = await _context.TdcCatEstadosPagoPedidos.FirstOrDefaultAsync(m => m.Id == id);
+            var tdccatestadospagopedido = ToDto.PagoToDto(await _context.TdcCatEstadosPagoPedidos.FirstOrDefaultAsync(m => m.Id == id));
 
             if (tdccatestadospagopedido == null)
             {
@@ -51,8 +53,8 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPago
 
             if (tdccatestadospagopedido != null)
             {
-                TdcCatEstadosPagoPedido = tdccatestadospagopedido;
-                _context.TdcCatEstadosPagoPedidos.Remove(TdcCatEstadosPagoPedido);
+                TdcCatEstadosPagoPedido = ToDto.PagoToDto(tdccatestadospagopedido);
+                _context.TdcCatEstadosPagoPedidos.Remove(DtoTo.PagoDtoToDao(TdcCatEstadosPagoPedido));
                 await _context.SaveChangesAsync();
             }
 

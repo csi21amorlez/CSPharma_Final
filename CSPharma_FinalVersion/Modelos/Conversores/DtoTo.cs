@@ -68,7 +68,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             TdcCatLineasDistribucion lineas = new TdcCatLineasDistribucion();
 
-            lineas.Id = dto.ID;
+            lineas.Id = dto.Id;
             lineas.MdUuid = Guid.NewGuid().ToString();
             lineas.MdDate = DateTime.Now;
             lineas.CodLinea = dto.CodLinea;

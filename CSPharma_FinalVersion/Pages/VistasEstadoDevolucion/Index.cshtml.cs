@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using CSPharma_FinalVersion.Models.Conversores;
+using Models.DTOs;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
 {
@@ -18,13 +20,13 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
             _context = context;
         }
 
-        public IList<TdcCatEstadosDevolucionPedido> TdcCatEstadosDevolucionPedido { get;set; } = default!;
+        public IList<DevolucionDTO> TdcCatEstadosDevolucionPedido { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
             if (_context.TdcCatEstadosDevolucionPedidos != null)
             {
-                TdcCatEstadosDevolucionPedido = await _context.TdcCatEstadosDevolucionPedidos.ToListAsync();
+                TdcCatEstadosDevolucionPedido = ToDto.ListDevolucionToDto(await _context.TdcCatEstadosDevolucionPedidos.ToListAsync());
             }
         }
     }

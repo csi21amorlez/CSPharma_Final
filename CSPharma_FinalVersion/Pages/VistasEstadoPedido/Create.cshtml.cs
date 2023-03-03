@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
 {
@@ -24,7 +26,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
         }
 
         [BindProperty]
-        public TdcTchEstadoPedido TdcTchEstadoPedido { get; set; }
+        public EstadoPedidoDTO TdcTchEstadoPedido { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -35,7 +37,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
                 return Page();
             }
 
-            _context.TdcTchEstadoPedidos.Add(TdcTchEstadoPedido);
+            _context.TdcTchEstadoPedidos.Add(DtoTo.EstadoPedidoDtoToDao(TdcTchEstadoPedido));
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

@@ -71,10 +71,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/ViewListEstadoDevolucion.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxWaWV3TGlzdEVzdGFkb0Rldm9sdWNpb24uY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

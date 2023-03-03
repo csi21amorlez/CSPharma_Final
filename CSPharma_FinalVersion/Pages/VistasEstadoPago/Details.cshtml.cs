@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoPago
 {
@@ -18,7 +20,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPago
             _context = context;
         }
 
-      public TdcCatEstadosPagoPedido TdcCatEstadosPagoPedido { get; set; }
+      public PagoDTO TdcCatEstadosPagoPedido { get; set; }
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -27,7 +29,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPago
                 return NotFound();
             }
 
-            var tdccatestadospagopedido = await _context.TdcCatEstadosPagoPedidos.FirstOrDefaultAsync(m => m.Id == id);
+            var tdccatestadospagopedido = ToDto.PagoToDto(await _context.TdcCatEstadosPagoPedidos.FirstOrDefaultAsync(m => m.Id == id));
             if (tdccatestadospagopedido == null)
             {
                 return NotFound();

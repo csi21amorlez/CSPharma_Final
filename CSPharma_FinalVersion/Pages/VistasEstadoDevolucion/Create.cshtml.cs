@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
 {
@@ -24,7 +26,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
         }
 
         [BindProperty]
-        public TdcCatEstadosDevolucionPedido TdcCatEstadosDevolucionPedido { get; set; }
+        public DevolucionDTO TdcCatEstadosDevolucionPedido { get; set; }
         
 
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
@@ -35,7 +37,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
                 return Page();
             }
 
-            _context.TdcCatEstadosDevolucionPedidos.Add(TdcCatEstadosDevolucionPedido);
+            _context.TdcCatEstadosDevolucionPedidos.Add(DtoTo.DevolucionDtoToDao(TdcCatEstadosDevolucionPedido));
             await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");

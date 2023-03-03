@@ -12,7 +12,7 @@ namespace Models.DTOs
      */
     public class LineasDTO
     {
-        public long ID { get; set; }
+        public long Id { get; set; }
         public string CodLinea { get; set; }
 
         public string CodProvincia { get; set; }

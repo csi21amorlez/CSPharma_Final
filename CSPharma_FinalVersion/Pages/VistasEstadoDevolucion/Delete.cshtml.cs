@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
 {
@@ -19,7 +21,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
         }
 
         [BindProperty]
-      public TdcCatEstadosDevolucionPedido TdcCatEstadosDevolucionPedido { get; set; }
+      public DevolucionDTO TdcCatEstadosDevolucionPedido { get; set; }
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -28,7 +30,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
                 return NotFound();
             }
 
-            var tdccatestadosdevolucionpedido = await _context.TdcCatEstadosDevolucionPedidos.FirstOrDefaultAsync(m => m.Id == id);
+            var tdccatestadosdevolucionpedido = ToDto.DevolucionToDto(await _context.TdcCatEstadosDevolucionPedidos.FirstOrDefaultAsync(m => m.Id == id));
 
             if (tdccatestadosdevolucionpedido == null)
             {
@@ -51,8 +53,8 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoDevolucion
 
             if (tdccatestadosdevolucionpedido != null)
             {
-                TdcCatEstadosDevolucionPedido = tdccatestadosdevolucionpedido;
-                _context.TdcCatEstadosDevolucionPedidos.Remove(TdcCatEstadosDevolucionPedido);
+                TdcCatEstadosDevolucionPedido = ToDto.DevolucionToDto(tdccatestadosdevolucionpedido);
+                _context.TdcCatEstadosDevolucionPedidos.Remove(DtoTo.DevolucionDtoToDao(TdcCatEstadosDevolucionPedido));
                 await _context.SaveChangesAsync();
             }
 

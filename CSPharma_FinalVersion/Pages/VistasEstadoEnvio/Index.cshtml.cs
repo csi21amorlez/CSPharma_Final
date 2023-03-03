@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoEnvio
 {
@@ -18,13 +20,13 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoEnvio
             _context = context;
         }
 
-        public IList<TdcCatEstadosEnvioPedido> TdcCatEstadosEnvioPedido { get;set; } = default!;
+        public IList<EnvioDTO> TdcCatEstadosEnvioPedido { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
             if (_context.TdcCatEstadosEnvioPedidos != null)
             {
-                TdcCatEstadosEnvioPedido = await _context.TdcCatEstadosEnvioPedidos.ToListAsync();
+                TdcCatEstadosEnvioPedido = ToDto.ListEnvioToDto(await _context.TdcCatEstadosEnvioPedidos.ToListAsync());
             }
         }
     }
