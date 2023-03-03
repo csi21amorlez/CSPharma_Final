@@ -5,6 +5,12 @@ namespace CSPharma_FinalVersion.Models.Lógica
 {
     public class Encriptador
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dato"></param>
+        /// <param name="key"></param>
+        /// <returns></returns>
         public static string Encriptar(string dato, string key)
         {
 

@@ -10,12 +10,17 @@ namespace CSPharma_FinalVersion.Models.Conversores
     {
         #region Conversores individuales
 
-
+        /// <summary>
+        /// Metodo convertidor de dto a entidad de Empleado
+        /// </summary>
+        /// <param name="EmpleadoDTO dto"></param>
+        /// <returns>DlkCatAccEmpleado dao</returns>
 
         public static DlkCatAccEmpleado EmpleadoDtoToDao(EmpleadoDTO dto)
         {
             DlkCatAccEmpleado empleado = new DlkCatAccEmpleado();
 
+            empleado.Id = dto.Id;
             empleado.MdUuid = dto.MdUuid;
             empleado.MdDate = dto.MdDate;
             empleado.CodEmpleado = dto.CodEmpleado;
@@ -23,11 +28,15 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
             return empleado;
         }
-
+        /// <summary>
+        /// Metodo convertidor de dto a entidad de Devolucion
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns>TdcCatEstadosDevolucionPedido dao</returns>
         public static TdcCatEstadosDevolucionPedido DevolucionDtoToDao(DevolucionDTO dto)
         {
             TdcCatEstadosDevolucionPedido devolucion = new TdcCatEstadosDevolucionPedido();
-
+                        
             devolucion.Id = dto.Id;
             devolucion.MdUuid = Guid.NewGuid().ToString();
             devolucion.MdDate = DateTime.Now;
@@ -36,7 +45,11 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
             return devolucion;
         }
-
+        /// <summary>
+        /// Metodo convertidor de dto a entidad de Envio
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns>TdcCatEstadosEnvioPedido dao</returns>
         public static TdcCatEstadosEnvioPedido EnvioDtoToDao(EnvioDTO dto)
         {
             TdcCatEstadosEnvioPedido envio = new TdcCatEstadosEnvioPedido();
@@ -49,7 +62,11 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
             return envio;
         }
-
+        /// <summary>
+        /// Metodo convertidor de dto a entidad de Pago
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns>TdcCatEstadosPagoPedido dao</returns>
         public static TdcCatEstadosPagoPedido PagoDtoToDao(PagoDTO dto)
         {
             TdcCatEstadosPagoPedido pago = new TdcCatEstadosPagoPedido();
@@ -63,7 +80,11 @@ namespace CSPharma_FinalVersion.Models.Conversores
             return pago;
 
         }
-
+        /// <summary>
+        /// Metodo convertidor de dto a entidad de LineasDistribucion
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns>TdcCatLineasDistribucion dao</returns>
         public static TdcCatLineasDistribucion LineasDtoToDao(LineasDTO dto)
         {
             TdcCatLineasDistribucion lineas = new TdcCatLineasDistribucion();
@@ -80,7 +101,11 @@ namespace CSPharma_FinalVersion.Models.Conversores
 
 
         }
-
+        /// <summary>
+        /// Metodo convertidor de dto a EstadoPedido
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns>TdcTchEstadoPedido dao</returns>
         public static TdcTchEstadoPedido EstadoPedidoDtoToDao(EstadoPedidoDTO dto)
         {
             TdcTchEstadoPedido estadoPedido = new TdcTchEstadoPedido();
@@ -105,7 +130,11 @@ namespace CSPharma_FinalVersion.Models.Conversores
         #endregion
 
         #region Conversores de listas
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="dto"></param>
+        /// <returns></returns>
         public static List<TdcCatEstadosDevolucionPedido> ListDevolucionDtoToDao(IList<DevolucionDTO> dto)
         {
             List<TdcCatEstadosDevolucionPedido> listDevoluciones = new List<TdcCatEstadosDevolucionPedido>();

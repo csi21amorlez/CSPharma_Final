@@ -25,6 +25,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             DevolucionDTO dto = new DevolucionDTO();
 
+            dto.Id = devolucion.Id;
             dto.CodEstadoDevolucion = devolucion.CodEstadoDevolucion;
             dto.DesEstadoDevolucion = devolucion.DesEstadoDevolucion;
 
@@ -35,6 +36,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             EmpleadoDTO dto = new EmpleadoDTO();
 
+            dto.Id = empleado.Id;
             dto.CodEmpleado = empleado.CodEmpleado;
             dto.ClaveEmpleado = Encriptador.Desencriptar(empleado.ClaveEmpleado, "EstaEsLaStringParaEncriptarLasContraseñasYDemásDatosQueSeTienenQueOcultasPorqueSomosMuyProfesionales");
             dto.MdDate = empleado.MdDate;
@@ -48,6 +50,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             EnvioDTO dto = new EnvioDTO();
 
+            dto.Id = envio.Id;
             dto.CodEstadoEnvio = envio.CodEstadoEnvio;
             dto.DesEstadoEnvio = envio.CodEstadoEnvio;
 
@@ -58,6 +61,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             LineasDTO dto = new LineasDTO();
 
+            dto.Id = lineas.Id;
             dto.CodBarrio = lineas.CodBarrio;
             dto.CodLinea = lineas.CodLinea;
             dto.CodMunicipio = lineas.CodMunicipio;
@@ -70,6 +74,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
         {
             PagoDTO dto = new PagoDTO();
 
+            dto.Id = pago.Id;
             dto.CodEstadoPago = pago.CodEstadoPago;
             dto.DesEstadoPago = pago.DesEstadoPago;
 
