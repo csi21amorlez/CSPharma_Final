@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
+using Models.DTOs;
+using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {
@@ -18,13 +20,14 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
             _context = context;
         }
 
-        public IList<DlkCatAccEmpleado> DlkCatAccEmpleado { get;set; } = default!;
+        public IList<EmpleadoDTO
+            > DlkCatAccEmpleado { get;set; } = default!;
 
         public async Task OnGetAsync()
         {
             if (_context.DlkCatAccEmpleados != null)
             {
-                DlkCatAccEmpleado = await _context.DlkCatAccEmpleados.ToListAsync();
+                DlkCatAccEmpleado = ToDto.ListEmpleadoToDto(await _context.DlkCatAccEmpleados.ToListAsync());
             }
         }
     }

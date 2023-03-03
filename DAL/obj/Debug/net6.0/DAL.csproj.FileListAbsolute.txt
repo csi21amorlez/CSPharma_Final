@@ -40,3 +40,17 @@ C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\DAL\obj\Debug\net6
 C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.pdb
 C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
 C:\Users\CSI21-Amorlez\Documents\CspharmaFinal\CSPharma_Final\DAL\obj\Debug\net6.0\ref\DAL.dll
+F:\aspnet\DAL\bin\Debug\net6.0\DAL.deps.json
+F:\aspnet\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+F:\aspnet\DAL\bin\Debug\net6.0\DAL.dll
+F:\aspnet\DAL\bin\Debug\net6.0\DAL.pdb
+F:\aspnet\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+F:\aspnet\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+F:\aspnet\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+F:\aspnet\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+F:\aspnet\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+F:\aspnet\DAL\obj\Debug\net6.0\DAL.dll
+F:\aspnet\DAL\obj\Debug\net6.0\refint\DAL.dll
+F:\aspnet\DAL\obj\Debug\net6.0\DAL.pdb
+F:\aspnet\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+F:\aspnet\DAL\obj\Debug\net6.0\ref\DAL.dll
