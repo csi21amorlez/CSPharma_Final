@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNet.Identity.EntityFramework;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
 namespace DAL.Models;
 
-public partial class DlkCatAccEmpleado 
+public partial class DlkCatAccEmpleado
 {
     public string MdUuid { get; set; } = null!;
 
@@ -12,9 +11,9 @@ public partial class DlkCatAccEmpleado
 
     public long Id { get; set; }
 
-    public string CodEmpleado { get; set; } = null!;
+    public string? CodEmpleado { get; set; }
 
-    public string ClaveEmpleado { get; set; } = null!;
+    public string? ClaveEmpleado { get; set; }
 
-    public short NivelAcceso { get; set; }
+    public short? NivelAcceso { get; set; }
 }

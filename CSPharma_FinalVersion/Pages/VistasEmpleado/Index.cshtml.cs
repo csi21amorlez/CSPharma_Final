@@ -6,22 +6,21 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
-using Models.DTOs;
 using CSPharma_FinalVersion.Models.Conversores;
+using Models.DTOs;
 
 namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {
     public class IndexModel : PageModel
     {
-        private readonly DAL.Models.CspharmaInformacionalContext _context;
+        private readonly DAL.Models.CspharmaInformationalContext _context;
 
-        public IndexModel(DAL.Models.CspharmaInformacionalContext context)
+        public IndexModel(DAL.Models.CspharmaInformationalContext context)
         {
             _context = context;
         }
 
-        public IList<EmpleadoDTO
-            > DlkCatAccEmpleado { get;set; } = default!;
+        public IList<EmpleadoDTO> DlkCatAccEmpleado { get;set; } = default!;
 
         public async Task OnGetAsync()
         {

@@ -5,6 +5,7 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = CSPharma_FinalVersion
 build_property.RootNamespace = CSPharma_FinalVersion
@@ -14,6 +15,14 @@ build_property.SupportLocalizedComponentNames =
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = F:\aspnet\CSPharma_FinalVersion
 build_property._RazorSourceGeneratorDebug = 
+
+[F:/aspnet/CSPharma_FinalVersion/Pages/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[F:/aspnet/CSPharma_FinalVersion/Pages/Auth/SignUp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQXV0aFxTaWduVXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
 
 [F:/aspnet/CSPharma_FinalVersion/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
@@ -31,10 +40,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEmpleado/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [F:/aspnet/CSPharma_FinalVersion/Pages/VistasEmpleado/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -49,86 +54,6 @@ build_metadata.AdditionalFiles.CssScope =
 
 [F:/aspnet/CSPharma_FinalVersion/Pages/VistasEmpleado/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoDevolucion/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRGV2b2x1Y2lvblxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cRGVsZXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cRGV0YWlscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cRWRpdC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoEnvio/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvRW52aW9cSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXENyZWF0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXERlbGV0ZS5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXERldGFpbHMuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXEVkaXQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoLineasDistribucion/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvTGluZWFzRGlzdHJpYnVjaW9uXEluZGV4LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPago/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xDcmVhdGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPago/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPago/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xEZXRhaWxzLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPago/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xFZGl0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPago/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGFnb1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Create.cshtml]

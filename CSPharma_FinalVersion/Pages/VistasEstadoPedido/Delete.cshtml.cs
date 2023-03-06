@@ -6,22 +6,20 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
-using Models.DTOs;
-using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
 {
     public class DeleteModel : PageModel
     {
-        private readonly DAL.Models.CspharmaInformacionalContext _context;
+        private readonly DAL.Models.CspharmaInformationalContext _context;
 
-        public DeleteModel(DAL.Models.CspharmaInformacionalContext context)
+        public DeleteModel(DAL.Models.CspharmaInformationalContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-      public EstadoPedidoDTO TdcTchEstadoPedido { get; set; }
+      public TdcTchEstadoPedido TdcTchEstadoPedido { get; set; }
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -30,7 +28,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
                 return NotFound();
             }
 
-            var tdctchestadopedido = ToDto.EstadoPedidoToDto(await _context.TdcTchEstadoPedidos.FirstOrDefaultAsync(m => m.Id == id));
+            var tdctchestadopedido = await _context.TdcTchEstadoPedidos.FirstOrDefaultAsync(m => m.Id == id);
 
             if (tdctchestadopedido == null)
             {
@@ -53,8 +51,8 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
 
             if (tdctchestadopedido != null)
             {
-                TdcTchEstadoPedido = ToDto.EstadoPedidoToDto(tdctchestadopedido);
-                _context.TdcTchEstadoPedidos.Remove(DtoTo.EstadoPedidoDtoToDao(TdcTchEstadoPedido));
+                TdcTchEstadoPedido = tdctchestadopedido;
+                _context.TdcTchEstadoPedidos.Remove(TdcTchEstadoPedido);
                 await _context.SaveChangesAsync();
             }
 

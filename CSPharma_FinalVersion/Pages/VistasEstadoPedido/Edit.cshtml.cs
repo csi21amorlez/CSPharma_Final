@@ -12,9 +12,9 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
 {
     public class EditModel : PageModel
     {
-        private readonly DAL.Models.CspharmaInformacionalContext _context;
+        private readonly DAL.Models.CspharmaInformationalContext _context;
 
-        public EditModel(DAL.Models.CspharmaInformacionalContext context)
+        public EditModel(DAL.Models.CspharmaInformationalContext context)
         {
             _context = context;
         }
@@ -35,6 +35,10 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
                 return NotFound();
             }
             TdcTchEstadoPedido = tdctchestadopedido;
+           ViewData["CodEstadoDevolucion"] = new SelectList(_context.TdcCatEstadosDevolucionPedidos, "CodEstadoDevolucion", "CodEstadoDevolucion");
+           ViewData["CodEstadoEnvio"] = new SelectList(_context.TdcCatEstadosEnvioPedidos, "CodEstadoEnvio", "CodEstadoEnvio");
+           ViewData["CodEstadoPago"] = new SelectList(_context.TdcCatEstadosPagoPedidos, "CodEstadoPago", "CodEstadoPago");
+           ViewData["CodLinea"] = new SelectList(_context.TdcCatLineasDistribucions, "CodLinea", "CodLinea");
             return Page();
         }
 

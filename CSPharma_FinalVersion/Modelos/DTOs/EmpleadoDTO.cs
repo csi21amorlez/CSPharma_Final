@@ -17,5 +17,7 @@ namespace Models.DTOs
         public string CodEmpleado { get; set; }
         public string ClaveEmpleado { get; set; }
         public short NivelAcceso { get; set; }
+        
+        public string ConfirmPassword { get; set; }
     }
 }

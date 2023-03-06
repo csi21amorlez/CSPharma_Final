@@ -13,9 +13,11 @@ public partial class TdcCatLineasDistribucion
 
     public string CodLinea { get; set; } = null!;
 
-    public string CodProvincia { get; set; } = null!;
+    public string? CodProvincia { get; set; }
 
-    public string CodMunicipio { get; set; } = null!;
+    public string? CodMunicipio { get; set; }
 
-    public string CodBarrio { get; set; } = null!;
+    public string? CodBarrio { get; set; }
+
+    public virtual ICollection<TdcTchEstadoPedido> TdcTchEstadoPedidos { get; } = new List<TdcTchEstadoPedido>();
 }

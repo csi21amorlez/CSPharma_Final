@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace DAL.Models;
 
-public partial class CspharmaInformacionalContext : DbContext
+public partial class CspharmaInformationalContext : DbContext
 {
-    public CspharmaInformacionalContext()
+    public CspharmaInformationalContext()
     {
     }
 
-    public CspharmaInformacionalContext(DbContextOptions<CspharmaInformacionalContext> options)
+    public CspharmaInformationalContext(DbContextOptions<CspharmaInformationalContext> options)
         : base(options)
     {
     }
@@ -29,7 +29,7 @@ public partial class CspharmaInformacionalContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseNpgsql("Server=localhost;Port=5432;Database=cspharma_informacional;User Id=postgres;Password=root123");
+        => optionsBuilder.UseNpgsql("Server=localhost;Port=5433;Database=cspharma_informational;User Id=postgres;Password=root123");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -61,6 +61,8 @@ public partial class CspharmaInformacionalContext : DbContext
 
             entity.ToTable("tdc_cat_estados_devolucion_pedido", "dwh_torrecontrol");
 
+            entity.HasIndex(e => e.CodEstadoDevolucion, "cod_estado_devolucion").IsUnique();
+
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CodEstadoDevolucion)
                 .HasColumnType("character varying")
@@ -81,6 +83,8 @@ public partial class CspharmaInformacionalContext : DbContext
             entity.HasKey(e => e.Id).HasName("tdc_cat_estados_envio_pedido_pkey");
 
             entity.ToTable("tdc_cat_estados_envio_pedido", "dwh_torrecontrol");
+
+            entity.HasIndex(e => e.CodEstadoEnvio, "cod_estado_envio").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CodEstadoEnvio)
@@ -103,6 +107,8 @@ public partial class CspharmaInformacionalContext : DbContext
 
             entity.ToTable("tdc_cat_estados_pago_pedido", "dwh_torrecontrol");
 
+            entity.HasIndex(e => e.CodEstadoPago, "cod_estado_pago").IsUnique();
+
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CodEstadoPago)
                 .HasColumnType("character varying")
@@ -123,6 +129,8 @@ public partial class CspharmaInformacionalContext : DbContext
             entity.HasKey(e => e.Id).HasName("tdc_cat_lineas_distribucion_pkey");
 
             entity.ToTable("tdc_cat_lineas_distribucion", "dwh_torrecontrol");
+
+            entity.HasIndex(e => e.CodLinea, "cod_linea").IsUnique();
 
             entity.Property(e => e.Id).HasColumnName("id");
             entity.Property(e => e.CodBarrio)
@@ -173,6 +181,26 @@ public partial class CspharmaInformacionalContext : DbContext
             entity.Property(e => e.MdUuid)
                 .HasColumnType("character varying")
                 .HasColumnName("md_uuid");
+
+            entity.HasOne(d => d.CodEstadoDevolucionNavigation).WithMany(p => p.TdcTchEstadoPedidos)
+                .HasPrincipalKey(p => p.CodEstadoDevolucion)
+                .HasForeignKey(d => d.CodEstadoDevolucion)
+                .HasConstraintName("cod_dev");
+
+            entity.HasOne(d => d.CodEstadoEnvioNavigation).WithMany(p => p.TdcTchEstadoPedidos)
+                .HasPrincipalKey(p => p.CodEstadoEnvio)
+                .HasForeignKey(d => d.CodEstadoEnvio)
+                .HasConstraintName("cod_envio");
+
+            entity.HasOne(d => d.CodEstadoPagoNavigation).WithMany(p => p.TdcTchEstadoPedidos)
+                .HasPrincipalKey(p => p.CodEstadoPago)
+                .HasForeignKey(d => d.CodEstadoPago)
+                .HasConstraintName("cod_pago");
+
+            entity.HasOne(d => d.CodLineaNavigation).WithMany(p => p.TdcTchEstadoPedidos)
+                .HasPrincipalKey(p => p.CodLinea)
+                .HasForeignKey(d => d.CodLinea)
+                .HasConstraintName("cod_linea");
         });
 
         OnModelCreatingPartial(modelBuilder);

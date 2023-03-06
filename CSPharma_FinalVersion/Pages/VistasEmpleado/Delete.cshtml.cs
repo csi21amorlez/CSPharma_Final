@@ -13,15 +13,15 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {
     public class DeleteModel : PageModel
     {
-        private readonly DAL.Models.CspharmaInformacionalContext _context;
+        private readonly DAL.Models.CspharmaInformationalContext _context;
 
-        public DeleteModel(DAL.Models.CspharmaInformacionalContext context)
+        public DeleteModel(DAL.Models.CspharmaInformationalContext context)
         {
             _context = context;
         }
 
         [BindProperty]
-        public EmpleadoDTO DlkCatAccEmpleado { get; set; }
+      public EmpleadoDTO DlkCatAccEmpleado { get; set; }
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -30,16 +30,15 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
                 return NotFound();
             }
 
-            var dlkcataccempleado = ToDto.EmpleadoToDto(await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id));
-
+            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
 
             if (dlkcataccempleado == null)
             {
                 return NotFound();
             }
-            else
+            else 
             {
-                DlkCatAccEmpleado = dlkcataccempleado;
+                DlkCatAccEmpleado = ToDto.EmpleadoToDto(dlkcataccempleado);
             }
             return Page();
         }
@@ -50,12 +49,11 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
             {
                 return NotFound();
             }
-            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FindAsync(id);
+            var dlkcataccempleado = ToDto.EmpleadoToDto(await _context.DlkCatAccEmpleados.FindAsync(id));
 
             if (dlkcataccempleado != null)
-            {
-
-                _context.DlkCatAccEmpleados.Remove(dlkcataccempleado);
+            {                
+                _context.DlkCatAccEmpleados.Remove(DtoTo.EmpleadoDtoToDao(dlkcataccempleado));
                 await _context.SaveChangesAsync();
             }
 

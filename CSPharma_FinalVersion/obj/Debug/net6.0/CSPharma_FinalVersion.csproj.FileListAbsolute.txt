@@ -879,3 +879,8 @@ F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\refint\CSPharma_FinalVersion.dl
 F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\CSPharma_FinalVersion.pdb
 F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\CSPharma_FinalVersion.genruntimeconfig.cache
 F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\ref\CSPharma_FinalVersion.dll
+F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets\msbuild.CSPharma_FinalVersion.Microsoft.AspNetCore.StaticWebAssets.props
+F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets\msbuild.build.CSPharma_FinalVersion.props
+F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CSPharma_FinalVersion.props
+F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CSPharma_FinalVersion.props
+F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets.pack.json

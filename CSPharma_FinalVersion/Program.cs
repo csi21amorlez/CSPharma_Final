@@ -6,7 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddEntityFrameworkNpgsql()
-    .AddDbContext<CspharmaInformacionalContext>(options =>
+    .AddDbContext<CspharmaInformationalContext>(options =>
     {
         options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL"));
     });

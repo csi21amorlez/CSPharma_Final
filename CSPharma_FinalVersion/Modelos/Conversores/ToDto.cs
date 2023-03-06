@@ -1,6 +1,7 @@
 ﻿using CSPharma_FinalVersion.Models.Lógica;
 using Models.DTOs;
 using DAL.Models;
+using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Controller;
 
 namespace CSPharma_FinalVersion.Models.Conversores
 {
@@ -41,7 +42,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
             dto.ClaveEmpleado = Encriptador.Desencriptar(empleado.ClaveEmpleado, "EstaEsLaStringParaEncriptarLasContraseñasYDemásDatosQueSeTienenQueOcultasPorqueSomosMuyProfesionales");
             dto.MdDate = empleado.MdDate;
             dto.MdUuid = empleado.MdUuid;
-            dto.NivelAcceso = empleado.NivelAcceso;
+            dto.NivelAcceso = (short)empleado.NivelAcceso;
 
             return dto;
         }

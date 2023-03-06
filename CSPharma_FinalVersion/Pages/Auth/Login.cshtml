@@ -1,0 +1,21 @@
+﻿@page
+@model CSPharma_FinalVersion.Pages.Home.LoginModel
+@{
+}
+<form asp-action="LoginPost" method="post">
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <div class="form-group">
+        <label asp-for="model.CodEmpleado"></label>
+        <input asp-for="model.CodEmpleado" class="form-control" />
+        <span asp-validation-for="model.CodEmpleado" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="model.ClaveEmpleado"></label>
+        <input asp-for="model.ClaveEmpleado" class="form-control" />
+        <span asp-validation-for="model.ClaveEmpleado" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>

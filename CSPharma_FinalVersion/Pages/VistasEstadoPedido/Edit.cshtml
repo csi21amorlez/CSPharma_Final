@@ -26,17 +26,17 @@
             <input type="hidden" asp-for="TdcTchEstadoPedido.Id" />
             <div class="form-group">
                 <label asp-for="TdcTchEstadoPedido.CodEstadoEnvio" class="control-label"></label>
-                <input asp-for="TdcTchEstadoPedido.CodEstadoEnvio" class="form-control" />
+                <select asp-for="TdcTchEstadoPedido.CodEstadoEnvio" class="form-control" asp-items="ViewBag.CodEstadoEnvio"></select>
                 <span asp-validation-for="TdcTchEstadoPedido.CodEstadoEnvio" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TdcTchEstadoPedido.CodEstadoPago" class="control-label"></label>
-                <input asp-for="TdcTchEstadoPedido.CodEstadoPago" class="form-control" />
+                <select asp-for="TdcTchEstadoPedido.CodEstadoPago" class="form-control" asp-items="ViewBag.CodEstadoPago"></select>
                 <span asp-validation-for="TdcTchEstadoPedido.CodEstadoPago" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="TdcTchEstadoPedido.CodEstadoDevolucion" class="control-label"></label>
-                <input asp-for="TdcTchEstadoPedido.CodEstadoDevolucion" class="form-control" />
+                <select asp-for="TdcTchEstadoPedido.CodEstadoDevolucion" class="form-control" asp-items="ViewBag.CodEstadoDevolucion"></select>
                 <span asp-validation-for="TdcTchEstadoPedido.CodEstadoDevolucion" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -46,7 +46,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="TdcTchEstadoPedido.CodLinea" class="control-label"></label>
-                <input asp-for="TdcTchEstadoPedido.CodLinea" class="form-control" />
+                <select asp-for="TdcTchEstadoPedido.CodLinea" class="form-control" asp-items="ViewBag.CodLinea"></select>
                 <span asp-validation-for="TdcTchEstadoPedido.CodLinea" class="text-danger"></span>
             </div>
             <div class="form-group">

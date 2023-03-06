@@ -13,7 +13,17 @@
     <div class="col-md-4">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
+            <div class="form-group">
+                <label asp-for="DlkCatAccEmpleado.MdUuid" class="control-label"></label>
+                <input asp-for="DlkCatAccEmpleado.MdUuid" class="form-control" />
+                <span asp-validation-for="DlkCatAccEmpleado.MdUuid" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DlkCatAccEmpleado.MdDate" class="control-label"></label>
+                <input asp-for="DlkCatAccEmpleado.MdDate" class="form-control" />
+                <span asp-validation-for="DlkCatAccEmpleado.MdDate" class="text-danger"></span>
+            </div>
+            <input type="hidden" asp-for="DlkCatAccEmpleado.Id" />
             <div class="form-group">
                 <label asp-for="DlkCatAccEmpleado.CodEmpleado" class="control-label"></label>
                 <input asp-for="DlkCatAccEmpleado.CodEmpleado" class="form-control" />
@@ -41,7 +51,5 @@
 </div>
 
 @section Scripts {
-    @{
-        await Html.RenderPartialAsync("_ValidationScriptsPartial");
-    }
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
