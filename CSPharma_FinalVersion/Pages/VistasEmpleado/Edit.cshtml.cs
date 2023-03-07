@@ -12,43 +12,30 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {
     public class EditModel : PageModel
     {
-        private DlkCatAccEmpleado empleado = new DlkCatAccEmpleado();
         private readonly DAL.Models.CspharmaInformationalContext _context;
-        private List<string> roles = new List<string>{"Administrador","Empleado","Por confirmar"};
 
         public EditModel(DAL.Models.CspharmaInformationalContext context)
         {
             _context = context;
         }
 
-
         [BindProperty]
         public DlkCatAccEmpleado DlkCatAccEmpleado { get; set; } = default!;
-        [BindProperty]
-        public String nivelAcceso { get; set; }
-
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
-
             if (id == null || _context.DlkCatAccEmpleados == null)
             {
                 return NotFound();
             }
 
-            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
-            empleado = dlkcataccempleado;
+            var dlkcataccempleado =  await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
             if (dlkcataccempleado == null)
             {
                 return NotFound();
             }
-            
             DlkCatAccEmpleado = dlkcataccempleado;
-
-
-            ViewData["Roles"] = new SelectList(roles);
-
-
+           ViewData["NivelAcceso"] = new SelectList(_context.DlkCatAccRoles, "Id", "DescRol");
             return Page();
         }
 
@@ -60,8 +47,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
             {
                 return Page();
             }
-            empleado.NivelAcceso = roles.IndexOf(nivelAcceso);
-            DlkCatAccEmpleado = empleado;
+
             _context.Attach(DlkCatAccEmpleado).State = EntityState.Modified;
 
             try
@@ -85,7 +71,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 
         private bool DlkCatAccEmpleadoExists(long id)
         {
-            return _context.DlkCatAccEmpleados.Any(e => e.Id == id);
+          return _context.DlkCatAccEmpleados.Any(e => e.Id == id);
         }
     }
 }

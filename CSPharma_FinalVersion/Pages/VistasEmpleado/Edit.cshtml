@@ -4,18 +4,6 @@
 @{
     ViewData["Title"] = "Edit";
 }
-@{
-    var userRole = HttpContext.Session.GetInt32("UserRole");
-    if (userRole == null)
-    {
-        Response.Redirect("/Auth/Login");
-    }
-    if (userRole != 0)
-    {
-        Response.WriteAsync("Usuario no autorizado");
-        Response.Redirect("/Auth/Login");
-    }
-}
 
 <h1>Edit</h1>
 
@@ -32,24 +20,24 @@
             </div>
             <div class="form-group">
                 <label asp-for="DlkCatAccEmpleado.MdDate" class="control-label"></label>
-                <input asp-for="DlkCatAccEmpleado.MdDate" class="form-control" disabled/>
+                <input asp-for="DlkCatAccEmpleado.MdDate" class="form-control" disabled />
                 <span asp-validation-for="DlkCatAccEmpleado.MdDate" class="text-danger"></span>
             </div>
             <input type="hidden" asp-for="DlkCatAccEmpleado.Id" />
             <div class="form-group">
                 <label asp-for="DlkCatAccEmpleado.CodEmpleado" class="control-label"></label>
-                <input asp-for="DlkCatAccEmpleado.CodEmpleado" class="form-control" disabled/>
+                <input asp-for="DlkCatAccEmpleado.CodEmpleado" class="form-control" disabled />
                 <span asp-validation-for="DlkCatAccEmpleado.CodEmpleado" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="DlkCatAccEmpleado.ClaveEmpleado" class="control-label"></label>
-                <input asp-for="DlkCatAccEmpleado.ClaveEmpleado" class="form-control" disabled/>
+                <input asp-for="DlkCatAccEmpleado.ClaveEmpleado" class="form-control" disabled />
                 <span asp-validation-for="DlkCatAccEmpleado.ClaveEmpleado" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="nivelAcceso" class="control-label"></label>
-                <select asp-for="nivelAcceso" class="form-control" asp-items="ViewBag.Roles"></select>
-                <span asp-validation-for="nivelAcceso" class="text-danger"></span>
+                <label asp-for="DlkCatAccEmpleado.NivelAcceso" class="control-label"></label>
+                <select asp-for="DlkCatAccEmpleado.NivelAcceso" class="form-control" asp-items="ViewBag.NivelAcceso"></select>
+                <span asp-validation-for="DlkCatAccEmpleado.NivelAcceso" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
