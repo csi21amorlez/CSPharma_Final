@@ -44,6 +44,7 @@ namespace CSPharma_FinalVersion.Pages.Auth
 
             }
             HttpContext.Session.SetInt32("UserRole", (Int32)user.NivelAcceso);
+            HttpContext.Session.SetString("UserName", user.CodEmpleado);
             await _context.SaveChangesAsync();
 
             return RedirectToPage("../Index");

@@ -1,17 +1,9 @@
 ﻿@page
-@model CSPharma_FinalVersion.Pages.VistasEstadoPedido.IndexModel
+@model CSPharma_FinalVersion.Pages.VistasPedido.IndexModel
 
 @{
     ViewData["Title"] = "Index";
 }
-@{
-    var userRole = HttpContext.Session.GetInt32("UserRole");
-    if (userRole == null)
-    {
-        Response.Redirect("/Auth/Login");
-    }  
-}
-
 
 <h1>Index</h1>
 
@@ -21,12 +13,6 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].MdUuid)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].MdDate)
-            </th>
             <th>
                 @Html.DisplayNameFor(model => model.TdcTchEstadoPedido[0].CodPedido)
             </th>
@@ -49,22 +35,16 @@
 @foreach (var item in Model.TdcTchEstadoPedido) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.MdUuid)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MdDate)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.CodPedido)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CodEstadoDevolucionNavigation.CodEstadoDevolucion)
+                @Html.DisplayFor(modelItem => item.CodEstadoDevolucionNavigation.DesEstadoDevolucion)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CodEstadoEnvioNavigation.CodEstadoEnvio)
+                @Html.DisplayFor(modelItem => item.CodEstadoEnvioNavigation.DesEstadoEnvio)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CodEstadoPagoNavigation.CodEstadoPago)
+                @Html.DisplayFor(modelItem => item.CodEstadoPagoNavigation.DesEstadoPago)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.CodLineaNavigation.CodLinea)

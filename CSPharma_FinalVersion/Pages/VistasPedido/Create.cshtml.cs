@@ -6,10 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DAL.Models;
-using CSPharma_FinalVersion.Models.Conversores;
-using Models.DTOs;
 
-namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
+namespace CSPharma_FinalVersion.Pages.VistasPedido
 {
     public class CreateModel : PageModel
     {
@@ -22,11 +20,13 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
 
         public IActionResult OnGet()
         {
+            ViewData["CodEstadoDevolucion"] = new SelectList(_context.TdcCatEstadosDevolucionPedidos, "CodEstadoDevolucion", "DesEstadoDevolucion");
             ViewData["CodEstadoEnvio"] = new SelectList(_context.TdcCatEstadosEnvioPedidos, "CodEstadoEnvio", "DesEstadoEnvio");
             ViewData["CodEstadoPago"] = new SelectList(_context.TdcCatEstadosPagoPedidos, "CodEstadoPago", "DesEstadoPago");
             ViewData["CodLinea"] = new SelectList(_context.TdcCatLineasDistribucions, "CodLinea", "CodLinea");
             return Page();
         }
+
 
         [BindProperty]
         public TdcTchEstadoPedido TdcTchEstadoPedido { get; set; }
@@ -39,10 +39,9 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
             {
                 return Page();
             }
-          
 
-            TdcTchEstadoPedido.MdDate = DateTime.Now;
             TdcTchEstadoPedido.MdUuid = Guid.NewGuid().ToString();
+            TdcTchEstadoPedido.MdDate = DateTime.Now;
             _context.TdcTchEstadoPedidos.Add(TdcTchEstadoPedido);
             await _context.SaveChangesAsync();
 

@@ -12,40 +12,56 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {
     public class EditModel : PageModel
     {
+        private DlkCatAccEmpleado empleado = new DlkCatAccEmpleado();
         private readonly DAL.Models.CspharmaInformationalContext _context;
+        private List<string> roles = new List<string>{"Administrador","Empleado","Por confirmar"};
 
         public EditModel(DAL.Models.CspharmaInformationalContext context)
         {
             _context = context;
         }
 
+
         [BindProperty]
         public DlkCatAccEmpleado DlkCatAccEmpleado { get; set; } = default!;
+        [BindProperty]
+        public String nivelAcceso { get; set; }
+
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
+
             if (id == null || _context.DlkCatAccEmpleados == null)
             {
                 return NotFound();
             }
 
-            var dlkcataccempleado =  await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
+            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
+            empleado = dlkcataccempleado;
             if (dlkcataccempleado == null)
             {
                 return NotFound();
             }
+            
             DlkCatAccEmpleado = dlkcataccempleado;
-           ViewData["NivelAcceso"] = new SelectList(_context.DlkCatAccRoles, "Id", "DescRol");
+
+
+            ViewData["Roles"] = new SelectList(roles);
+
+
             return Page();
         }
 
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
-
+            empleado.NivelAcceso = roles.IndexOf(nivelAcceso);
+            DlkCatAccEmpleado = empleado;
             _context.Attach(DlkCatAccEmpleado).State = EntityState.Modified;
 
             try
@@ -69,7 +85,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 
         private bool DlkCatAccEmpleadoExists(long id)
         {
-          return _context.DlkCatAccEmpleados.Any(e => e.Id == id);
+            return _context.DlkCatAccEmpleados.Any(e => e.Id == id);
         }
     }
 }

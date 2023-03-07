@@ -60,24 +60,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRW1wbGVhZG9cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXENyZWF0ZS5jc2h0bWw=
+[F:/aspnet/CSPharma_FinalVersion/Pages/VistasPedido/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzUGVkaWRvXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXERlbGV0ZS5jc2h0bWw=
+[F:/aspnet/CSPharma_FinalVersion/Pages/VistasPedido/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzUGVkaWRvXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Details.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXERldGFpbHMuY3NodG1s
+[F:/aspnet/CSPharma_FinalVersion/Pages/VistasPedido/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzUGVkaWRvXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Edit.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXEVkaXQuY3NodG1s
+[F:/aspnet/CSPharma_FinalVersion/Pages/VistasPedido/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzUGVkaWRvXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[F:/aspnet/CSPharma_FinalVersion/Pages/VistasEstadoPedido/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzRXN0YWRvUGVkaWRvXEluZGV4LmNzaHRtbA==
+[F:/aspnet/CSPharma_FinalVersion/Pages/VistasPedido/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlzdGFzUGVkaWRvXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [F:/aspnet/CSPharma_FinalVersion/Pages/_ViewImports.cshtml]

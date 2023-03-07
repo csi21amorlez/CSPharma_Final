@@ -5,9 +5,9 @@ namespace DAL.Models;
 
 public partial class TdcTchEstadoPedido
 {
-    public string MdUuid { get; set; } = null!;
+    public string? MdUuid { get; set; }
 
-    public DateTime MdDate { get; set; }
+    public DateTime? MdDate { get; set; }
 
     public long Id { get; set; }
 

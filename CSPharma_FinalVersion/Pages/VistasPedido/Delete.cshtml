@@ -1,22 +1,9 @@
 ﻿@page
-@model CSPharma_FinalVersion.Pages.VistasEstadoPedido.DeleteModel
+@model CSPharma_FinalVersion.Pages.VistasPedido.DeleteModel
 
 @{
     ViewData["Title"] = "Delete";
 }
-@{
-    var userRole = HttpContext.Session.GetInt32("UserRole");
-    if (userRole == null)
-    {
-        Response.Redirect("/Auth/Login");
-    }
-    if (userRole == 2)
-    {
-        Response.WriteAsync("Usuario no autorizado");
-        Response.Redirect("/Auth/Login");
-    }
-}
-
 
 <h1>Delete</h1>
 

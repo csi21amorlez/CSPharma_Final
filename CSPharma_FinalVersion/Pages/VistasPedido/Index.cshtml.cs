@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
 
-namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
+namespace CSPharma_FinalVersion.Pages.VistasPedido
 {
     public class IndexModel : PageModel
     {
