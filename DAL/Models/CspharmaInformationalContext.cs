@@ -17,6 +17,8 @@ public partial class CspharmaInformationalContext : DbContext
 
     public virtual DbSet<DlkCatAccEmpleado> DlkCatAccEmpleados { get; set; }
 
+    public virtual DbSet<DlkCatAccRole> DlkCatAccRoles { get; set; }
+
     public virtual DbSet<TdcCatEstadosDevolucionPedido> TdcCatEstadosDevolucionPedidos { get; set; }
 
     public virtual DbSet<TdcCatEstadosEnvioPedido> TdcCatEstadosEnvioPedidos { get; set; }
@@ -53,6 +55,24 @@ public partial class CspharmaInformationalContext : DbContext
                 .HasColumnType("character varying")
                 .HasColumnName("md_uuid");
             entity.Property(e => e.NivelAcceso).HasColumnName("nivel_acceso");
+
+            entity.HasOne(d => d.NivelAccesoNavigation).WithMany(p => p.DlkCatAccEmpleados)
+                .HasForeignKey(d => d.NivelAcceso)
+                .HasConstraintName("rol");
+        });
+
+        modelBuilder.Entity<DlkCatAccRole>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("dlk_cat_acc_roles_pkey");
+
+            entity.ToTable("dlk_cat_acc_roles", "dlk_informacional");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.DescRol)
+                .HasColumnType("character varying")
+                .HasColumnName("descRol");
         });
 
         modelBuilder.Entity<TdcCatEstadosDevolucionPedido>(entity =>

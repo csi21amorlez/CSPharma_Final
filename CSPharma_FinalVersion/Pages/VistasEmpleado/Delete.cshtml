@@ -4,6 +4,18 @@
 @{
     ViewData["Title"] = "Delete";
 }
+@{
+    var userRole = HttpContext.Session.GetInt32("UserRole");
+    if (userRole == null)
+    {
+        Response.Redirect("/Auth/Login");
+    }
+    if (userRole != 0)
+    {
+        Response.WriteAsync("Usuario no autorizado");
+        Response.Redirect("/Auth/Login");
+    }
+}
 
 <h1>Delete</h1>
 
@@ -37,13 +49,13 @@
             @Html.DisplayFor(model => model.DlkCatAccEmpleado.ClaveEmpleado)
         </dd>
         <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.DlkCatAccEmpleado.NivelAcceso)
+            @Html.DisplayNameFor(model => model.DlkCatAccEmpleado.NivelAccesoNavigation)
         </dt>
         <dd class="col-sm-10">
-            @Html.DisplayFor(model => model.DlkCatAccEmpleado.NivelAcceso)
+            @Html.DisplayFor(model => model.DlkCatAccEmpleado.NivelAccesoNavigation.DescRol)
         </dd>
     </dl>
-
+    
     <form method="post">
         <input type="hidden" asp-for="DlkCatAccEmpleado.Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |

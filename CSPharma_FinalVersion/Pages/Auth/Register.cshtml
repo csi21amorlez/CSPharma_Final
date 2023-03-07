@@ -1,0 +1,44 @@
+﻿@page
+@model CSPharma_FinalVersion.Pages.Auth.RegisterModel
+
+@{
+    ViewData["Title"] = "Registrar Usuario";
+}
+
+<h1>Register</h1>
+
+<h4>DlkCatAccEmpleado</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="DlkCatAccEmpleado.CodEmpleado" class="control-label"></label>
+                <input asp-for="DlkCatAccEmpleado.CodEmpleado" class="form-control" />
+                <span asp-validation-for="DlkCatAccEmpleado.CodEmpleado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DlkCatAccEmpleado.ClaveEmpleado" class="control-label"></label>
+                <input asp-for="DlkCatAccEmpleado.ClaveEmpleado" class="form-control" />
+                <span asp-validation-for="DlkCatAccEmpleado.ClaveEmpleado" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="confirmPassword" class="control-label"></label>
+                <input asp-for="confirmPassword" class="form-control" />
+                <span asp-validation-for="confirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -4,6 +4,14 @@
 @{
     ViewData["Title"] = "Details";
 }
+@{
+    var userRole = HttpContext.Session.GetInt32("UserRole");
+    if (userRole == null)
+    {
+        Response.Redirect("/Auth/Login");
+    }  
+}
+
 
 <h1>Details</h1>
 

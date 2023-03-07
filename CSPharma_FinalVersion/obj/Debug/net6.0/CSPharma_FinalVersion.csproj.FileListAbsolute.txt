@@ -884,3 +884,11 @@ F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets\msbuild.build.C
 F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.CSPharma_FinalVersion.props
 F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.CSPharma_FinalVersion.props
 F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\staticwebassets.pack.json
+F:\aspnet\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+F:\aspnet\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+F:\aspnet\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+F:\aspnet\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+F:\aspnet\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.Extensions.Identity.Core.dll
+F:\aspnet\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.Extensions.Identity.Stores.dll
+F:\aspnet\CSPharma_FinalVersion\obj\Debug\net6.0\CSPharma_FinalVersion.MvcApplicationPartsAssemblyInfo.cs
+F:\aspnet\CSPharma_FinalVersion\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll

@@ -3,11 +3,14 @@ using Models.DTOs;
 using DAL.Models;
 using System.Configuration;
 using System.Text.Json.Serialization;
+using Microsoft.Extensions.Logging.Debug;
+using System.Diagnostics;
 
 namespace CSPharma_FinalVersion.Models.Conversores
 {
     public class DtoTo
     {
+       
         #region Conversores individuales
 
         /// <summary>
@@ -21,8 +24,8 @@ namespace CSPharma_FinalVersion.Models.Conversores
             DlkCatAccEmpleado empleado = new DlkCatAccEmpleado();
 
             empleado.Id = dto.Id;
-            empleado.MdUuid = dto.MdUuid;
-            empleado.MdDate = dto.MdDate;
+            empleado.MdUuid = Guid.NewGuid().ToString();
+            empleado.MdDate = DateTime.Now;
             empleado.CodEmpleado = dto.CodEmpleado;
             empleado.ClaveEmpleado = Encriptador.Encriptar(dto.ClaveEmpleado, "EstaEsLaStringParaEncriptarLasContraseñasYDemásDatosQueSeTienenQueOcultasPorqueSomosMuyProfesionales");
 
@@ -39,6 +42,7 @@ namespace CSPharma_FinalVersion.Models.Conversores
                         
             devolucion.Id = dto.Id;
             devolucion.MdUuid = Guid.NewGuid().ToString();
+
             devolucion.MdDate = DateTime.Now;
             devolucion.CodEstadoDevolucion = dto.CodEstadoDevolucion;
             devolucion.DesEstadoDevolucion = dto.DesEstadoDevolucion;

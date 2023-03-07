@@ -7,8 +7,6 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL.Models;
-using Models.DTOs;
-using CSPharma_FinalVersion.Models.Conversores;
 
 namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 {
@@ -22,7 +20,7 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
         }
 
         [BindProperty]
-        public EmpleadoDTO DlkCatAccEmpleado { get; set; } = default!;
+        public DlkCatAccEmpleado DlkCatAccEmpleado { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
@@ -31,17 +29,16 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
                 return NotFound();
             }
 
-            var dlkcataccempleado =  ToDto.EmpleadoToDto(await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id));
+            var dlkcataccempleado =  await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
             if (dlkcataccempleado == null)
             {
                 return NotFound();
             }
             DlkCatAccEmpleado = dlkcataccempleado;
+           ViewData["NivelAcceso"] = new SelectList(_context.DlkCatAccRoles, "Id", "DescRol");
             return Page();
         }
 
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see https://aka.ms/RazorPagesCRUD.
         public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)

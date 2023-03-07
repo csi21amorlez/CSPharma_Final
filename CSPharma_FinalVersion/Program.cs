@@ -1,7 +1,11 @@
 using DAL.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 
 // Add services to the container.
 builder.Services.AddRazorPages();
@@ -10,6 +14,13 @@ builder.Services.AddEntityFrameworkNpgsql()
     {
         options.UseNpgsql(builder.Configuration.GetConnectionString("PostgreSQL"));
     });
+
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(o =>
+{
+    o.IdleTimeout = TimeSpan.FromMinutes(30);
+});
+
 
 var app = builder.Build();
 
@@ -25,6 +36,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseSession();
+app.UseAuthentication();;
 
 app.UseAuthorization();
 

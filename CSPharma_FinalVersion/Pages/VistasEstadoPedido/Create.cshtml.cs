@@ -6,6 +6,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using DAL.Models;
+using CSPharma_FinalVersion.Models.Conversores;
+using Models.DTOs;
 
 namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
 {
@@ -20,10 +22,9 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
 
         public IActionResult OnGet()
         {
-        ViewData["CodEstadoDevolucion"] = new SelectList(_context.TdcCatEstadosDevolucionPedidos, "CodEstadoDevolucion", "CodEstadoDevolucion");
-        ViewData["CodEstadoEnvio"] = new SelectList(_context.TdcCatEstadosEnvioPedidos, "CodEstadoEnvio", "CodEstadoEnvio");
-        ViewData["CodEstadoPago"] = new SelectList(_context.TdcCatEstadosPagoPedidos, "CodEstadoPago", "CodEstadoPago");
-        ViewData["CodLinea"] = new SelectList(_context.TdcCatLineasDistribucions, "CodLinea", "CodLinea");
+            ViewData["CodEstadoEnvio"] = new SelectList(_context.TdcCatEstadosEnvioPedidos, "CodEstadoEnvio", "DesEstadoEnvio");
+            ViewData["CodEstadoPago"] = new SelectList(_context.TdcCatEstadosPagoPedidos, "CodEstadoPago", "DesEstadoPago");
+            ViewData["CodLinea"] = new SelectList(_context.TdcCatLineasDistribucions, "CodLinea", "CodLinea");
             return Page();
         }
 
@@ -38,7 +39,10 @@ namespace CSPharma_FinalVersion.Pages.VistasEstadoPedido
             {
                 return Page();
             }
+          
 
+            TdcTchEstadoPedido.MdDate = DateTime.Now;
+            TdcTchEstadoPedido.MdUuid = Guid.NewGuid().ToString();
             _context.TdcTchEstadoPedidos.Add(TdcTchEstadoPedido);
             await _context.SaveChangesAsync();
 

@@ -1,49 +1,52 @@
-using CSPharma_FinalVersion.Models.Conversores;
-using DAL.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using DAL.Models;
 using Models.DTOs;
-using System;
+using CSPharma_FinalVersion.Models.Lógica;
+using CSPharma_FinalVersion.Modelos.Lógica;
 
-namespace CSPharma_FinalVersion.Pages.Home
+namespace CSPharma_FinalVersion.Pages.Auth
 {
-    public class LoginModel : Controller
+    public class LoginModel : PageModel
     {
-        private readonly CspharmaInformationalContext _context;
+        private readonly DAL.Models.CspharmaInformationalContext _context;
 
-        public LoginModel(CspharmaInformationalContext context)
+        public LoginModel(DAL.Models.CspharmaInformationalContext context)
         {
             _context = context;
         }
 
-        [HttpGet]      
-        public IActionResult Login()
+        public IActionResult OnGet()
         {
-            return View();
+            return Page();
         }
+
         [BindProperty]
-        public EmpleadoDTO model { get; set; }
-        [HttpPost]
-        public async Task<IActionResult> LoginPost()
+        public EmpleadoDTO DlkCatAccEmpleado { get; set; }
+
+
+        // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
+        public async Task<IActionResult> OnPostAsync()
         {
-            if (ModelState.IsValid)
+
+            var user = _context.DlkCatAccEmpleados.Where(e => e.ClaveEmpleado == EncriptadorAbstraccion.Encriptar(DlkCatAccEmpleado.ClaveEmpleado) && e.CodEmpleado == DlkCatAccEmpleado.CodEmpleado).FirstOrDefault();
+          
+            
+            if(user == null)
             {
-                EmpleadoDTO user = ToDto.EmpleadoToDto(await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(u => u.CodEmpleado == model.CodEmpleado && u.ClaveEmpleado == model.ClaveEmpleado));
+                ModelState.AddModelError(string.Empty, "El nombre de usuario o contraseña es incorrecto.");
+                return Page();
 
-                if (user != null)
-                {
-                    // Guardar el rol del usuario en la sesi�n
-                    //HttpContext.Session.SetInt32("UserRole", user.NivelAcceso);
-
-                    return Redirect("Index");
-                }
-
-                ModelState.AddModelError(string.Empty, "Credenciales invalidos");
             }
+            HttpContext.Session.SetInt32("UserRole", (Int32)user.NivelAcceso);
+            await _context.SaveChangesAsync();
 
-            return View(model);
+            return RedirectToPage("../Index");
         }
     }
 }
