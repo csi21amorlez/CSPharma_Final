@@ -37,6 +37,7 @@ namespace CSPharma_FinalVersion.Pages.VistasPedido
                 }
                 else
                 {
+                    //Asignamos los datos a la propiedad que mostramos
                     TdcTchEstadoPedido = tdctchestadopedido;
                 }
                 return Page();
