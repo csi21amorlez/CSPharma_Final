@@ -33,21 +33,27 @@ namespace CSPharma_FinalVersion.Pages.Auth
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-
-            var user = _context.DlkCatAccEmpleados.Where(e => e.ClaveEmpleado == EncriptadorAbstraccion.Encriptar(DlkCatAccEmpleado.ClaveEmpleado) && e.CodEmpleado == DlkCatAccEmpleado.CodEmpleado).FirstOrDefault();
-          
-            
-            if(user == null)
+            try
             {
-                ModelState.AddModelError(string.Empty, "El nombre de usuario o contraseña es incorrecto.");
-                return Page();
+                //Comprobamos que exista un usuario que tenga los campos que hemos pasado
+                var user = _context.DlkCatAccEmpleados.Where(e => e.ClaveEmpleado == EncriptadorAbstraccion.Encriptar(DlkCatAccEmpleado.ClaveEmpleado) && e.CodEmpleado == DlkCatAccEmpleado.CodEmpleado).FirstOrDefault();
 
+                //En caso de que sea null, lo enviamos de nuevo al login con un mensaje de error
+                if (user == null)
+                {
+                    ModelState.AddModelError(string.Empty, "El nombre de usuario o contraseña es incorrecto.");
+                    return Page();
+
+                }
+                //Asignamos el rol a la session, con esto controlaremos tanto el acceso con url, como contenido 
+                HttpContext.Session.SetInt32("UserRole", (Int32)user.NivelAcceso);                
+                await _context.SaveChangesAsync();
+
+                return RedirectToPage("../Index");
+            }catch (Exception ex)
+            {
+                return Redirect("../Error");
             }
-            HttpContext.Session.SetInt32("UserRole", (Int32)user.NivelAcceso);
-            HttpContext.Session.SetString("UserName", user.CodEmpleado);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("../Index");
         }
     }
 }

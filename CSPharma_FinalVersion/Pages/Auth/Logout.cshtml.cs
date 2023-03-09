@@ -7,8 +7,15 @@ namespace CSPharma_FinalVersion.Pages.Auth
     {
         public void OnGet()
         {
-            HttpContext.Session.Clear();
-            Response.Redirect("../index");
+            try
+            {
+                //Limpiamos la session y redireccionamos al index
+                HttpContext.Session.Clear();
+                Redirect("../index");
+            }catch (Exception ex)
+            {
+                Redirect("../Error");
+            }
         }
     }
 }

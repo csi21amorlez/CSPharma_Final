@@ -18,25 +18,35 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
             _context = context;
         }
 
-      public DlkCatAccEmpleado DlkCatAccEmpleado { get; set; }
+        public DlkCatAccEmpleado DlkCatAccEmpleado { get; set; }
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
-            if (id == null || _context.DlkCatAccEmpleados == null)
+            try
             {
-                return NotFound();
+                //Comprobamos que el usuario no sea nulo
+                if (id == null || _context.DlkCatAccEmpleados == null)
+                {
+                    return NotFound();
+                }
+                //Obtenemos los datos del usuario
+                var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
+                if (dlkcataccempleado == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    //Assignamos los datos a la propiedad enviada a la vista
+                    DlkCatAccEmpleado = dlkcataccempleado;
+                }
+                return Page();
+            }
+            catch (Exception ex)
+            {
+                return Redirect("../Error");
             }
 
-            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
-            if (dlkcataccempleado == null)
-            {
-                return NotFound();
-            }
-            else 
-            {
-                DlkCatAccEmpleado = dlkcataccempleado;
-            }
-            return Page();
         }
     }
 }

@@ -23,40 +23,57 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
-            if (id == null || _context.DlkCatAccEmpleados == null)
+            try
             {
-                return NotFound();
-            }
+                //Comprobamos si existe el usuario
+                if (id == null || _context.DlkCatAccEmpleados == null)
+                {
+                    return NotFound();
+                }
+                //Almacenamos los datos del usuario
+                var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
 
-            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (dlkcataccempleado == null)
+                if (dlkcataccempleado == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    //Asignamos los datos a la propiedad que mandaremos a la vista
+                    DlkCatAccEmpleado = dlkcataccempleado;
+                }
+                return Page();
+            } catch (Exception ex) 
             {
-                return NotFound();
+                return Redirect("../Error");
             }
-            else 
-            {
-                DlkCatAccEmpleado = dlkcataccempleado;
-            }
-            return Page();
+           
         }
 
         public async Task<IActionResult> OnPostAsync(long? id)
         {
-            if (id == null || _context.DlkCatAccEmpleados == null)
+            try
             {
-                return NotFound();
-            }
-            var dlkcataccempleado = await _context.DlkCatAccEmpleados.FindAsync(id);
+                //Comprobamos si existe el usuario
+                if (id == null || _context.DlkCatAccEmpleados == null)
+                {
+                    return NotFound();
+                } //Almacenamos los datos del usuario
+                var dlkcataccempleado = await _context.DlkCatAccEmpleados.FindAsync(id);
 
-            if (dlkcataccempleado != null)
+                if (dlkcataccempleado != null)
+                {
+                    DlkCatAccEmpleado = dlkcataccempleado;
+                    //Eliminamos el usuario y guardamos los cambios
+                    _context.DlkCatAccEmpleados.Remove(DlkCatAccEmpleado);
+                    await _context.SaveChangesAsync();
+                }
+
+                return RedirectToPage("./Index");
+            }catch (Exception ex)
             {
-                DlkCatAccEmpleado = dlkcataccempleado;
-                _context.DlkCatAccEmpleados.Remove(DlkCatAccEmpleado);
-                await _context.SaveChangesAsync();
+                return Redirect("../Error");
             }
-
-            return RedirectToPage("./Index");
         }
     }
 }

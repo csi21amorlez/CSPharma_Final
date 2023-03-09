@@ -23,40 +23,63 @@ namespace CSPharma_FinalVersion.Pages.VistasPedido
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
-            if (id == null || _context.TdcTchEstadoPedidos == null)
+            try
             {
-                return NotFound();
-            }
+                //Comprobamos que el pedido exista
+                if (id == null || _context.TdcTchEstadoPedidos == null)
+                {
+                    return NotFound();
+                }
+                //Obtenemos sus datos
+                var tdctchestadopedido = await _context.TdcTchEstadoPedidos.FirstOrDefaultAsync(m => m.Id == id);
 
-            var tdctchestadopedido = await _context.TdcTchEstadoPedidos.FirstOrDefaultAsync(m => m.Id == id);
+                if (tdctchestadopedido == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    //Asignamos sus datos a la propiedad que mandamos a la vista
+                    TdcTchEstadoPedido = tdctchestadopedido;
+                }
+                return Page();
 
-            if (tdctchestadopedido == null)
+            } catch (Exception ex)
             {
-                return NotFound();
+                return Redirect("../Error");
             }
-            else 
-            {
-                TdcTchEstadoPedido = tdctchestadopedido;
-            }
-            return Page();
+           
         }
 
         public async Task<IActionResult> OnPostAsync(long? id)
         {
-            if (id == null || _context.TdcTchEstadoPedidos == null)
+            try
             {
-                return NotFound();
-            }
-            var tdctchestadopedido = await _context.TdcTchEstadoPedidos.FindAsync(id);
+                //Comrpobramos que hayan registros en bbdd
+                if (id == null || _context.TdcTchEstadoPedidos == null)
+                {
+                    return NotFound();
+                }
+                //Obtenemos los datos del pedido concreto
+                var tdctchestadopedido = await _context.TdcTchEstadoPedidos.FindAsync(id);
 
-            if (tdctchestadopedido != null)
+                if (tdctchestadopedido != null)
+                {
+                    //Asignamos a la propiedad
+                    TdcTchEstadoPedido = tdctchestadopedido;
+                    //Eliminamos el pedido
+                    _context.TdcTchEstadoPedidos.Remove(TdcTchEstadoPedido);
+                    //Guardamos cambios
+                    await _context.SaveChangesAsync();
+                }
+
+                return RedirectToPage("./Index");
+            }catch(Exception ex)
             {
-                TdcTchEstadoPedido = tdctchestadopedido;
-                _context.TdcTchEstadoPedidos.Remove(TdcTchEstadoPedido);
-                await _context.SaveChangesAsync();
+                return Redirect("../Error");
+            }
             }
 
-            return RedirectToPage("./Index");
-        }
+            
     }
 }

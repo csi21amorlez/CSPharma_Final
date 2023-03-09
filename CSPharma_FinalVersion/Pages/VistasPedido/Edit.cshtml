@@ -4,6 +4,18 @@
 @{
     ViewData["Title"] = "Edit";
 }
+@{
+    var userRole = HttpContext.Session.GetInt32("UserRole");
+    if (userRole == null)
+    {
+        Response.Redirect("/Auth/Login");
+    }
+    if (userRole != 0 || userRole != 1)
+    {
+        Response.WriteAsync("Usuario no autorizado");
+        Response.Redirect("/Auth/Login");
+    }
+}
 
 <h1>Edit</h1>
 

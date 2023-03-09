@@ -4,6 +4,18 @@
 @{
     ViewData["Title"] = "Edit";
 }
+@{
+    var userRole = HttpContext.Session.GetInt32("UserRole");
+    if (userRole == null)
+    {
+        Response.Redirect("/Auth/Login");
+    }
+    if (userRole != 0)
+    {
+        Response.WriteAsync("Usuario no autorizado");
+        Response.Redirect("/Auth/Login");
+    }
+}
 
 <h1>Edit</h1>
 
@@ -31,7 +43,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="DlkCatAccEmpleado.ClaveEmpleado" class="control-label"></label>
-                <input asp-for="DlkCatAccEmpleado.ClaveEmpleado" class="form-control" disabled />
+                <input asp-for="DlkCatAccEmpleado.ClaveEmpleado" class="form-control" disabled/>
                 <span asp-validation-for="DlkCatAccEmpleado.ClaveEmpleado" class="text-danger"></span>
             </div>
             <div class="form-group">

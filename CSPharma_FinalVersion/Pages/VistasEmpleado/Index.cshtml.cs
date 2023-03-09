@@ -22,10 +22,18 @@ namespace CSPharma_FinalVersion.Pages.VistasEmpleado
 
         public async Task OnGetAsync()
         {
-            if (_context.DlkCatAccEmpleados != null)
+            try
             {
-                DlkCatAccEmpleado = await _context.DlkCatAccEmpleados
-                .Include(d => d.NivelAccesoNavigation).ToListAsync();
+                //Comprobamos que existan registros en bbdd
+                if (_context.DlkCatAccEmpleados != null)
+                {
+                    //Incluimos los datos de los roles
+                    DlkCatAccEmpleado = await _context.DlkCatAccEmpleados
+                    .Include(d => d.NivelAccesoNavigation).ToListAsync();
+                }
+            }catch (Exception ex)
+            {
+                Redirect("../Error");
             }
         }
     }

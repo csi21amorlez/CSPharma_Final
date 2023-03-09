@@ -22,14 +22,21 @@ namespace CSPharma_FinalVersion.Pages.VistasPedido
 
         public async Task OnGetAsync()
         {
-            if (_context.TdcTchEstadoPedidos != null)
+            try
             {
-                TdcTchEstadoPedido = await _context.TdcTchEstadoPedidos
-                .Include(t => t.CodEstadoDevolucionNavigation)
-                .Include(t => t.CodEstadoEnvioNavigation)
-                .Include(t => t.CodEstadoPagoNavigation)
-                .Include(t => t.CodLineaNavigation).ToListAsync();
+                if (_context.TdcTchEstadoPedidos != null)
+                {//Enviamos la informacion de los campos referenciados
+                    TdcTchEstadoPedido = await _context.TdcTchEstadoPedidos
+                    .Include(t => t.CodEstadoDevolucionNavigation)
+                    .Include(t => t.CodEstadoEnvioNavigation)
+                    .Include(t => t.CodEstadoPagoNavigation)
+                    .Include(t => t.CodLineaNavigation).ToListAsync();
+                }
+            }catch (Exception ex)
+            {
+                Redirect("../Error");
             }
+           
         }
     }
 }

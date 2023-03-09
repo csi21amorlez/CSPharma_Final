@@ -20,11 +20,20 @@ namespace CSPharma_FinalVersion.Pages.VistasPedido
 
         public IActionResult OnGet()
         {
-            ViewData["CodEstadoDevolucion"] = new SelectList(_context.TdcCatEstadosDevolucionPedidos, "CodEstadoDevolucion", "DesEstadoDevolucion");
-            ViewData["CodEstadoEnvio"] = new SelectList(_context.TdcCatEstadosEnvioPedidos, "CodEstadoEnvio", "DesEstadoEnvio");
-            ViewData["CodEstadoPago"] = new SelectList(_context.TdcCatEstadosPagoPedidos, "CodEstadoPago", "DesEstadoPago");
-            ViewData["CodLinea"] = new SelectList(_context.TdcCatLineasDistribucions, "CodLinea", "CodLinea");
-            return Page();
+            try
+            {
+                //Obtenemos los datos de los campos referenciados
+                ViewData["CodEstadoDevolucion"] = new SelectList(_context.TdcCatEstadosDevolucionPedidos, "CodEstadoDevolucion", "DesEstadoDevolucion");
+                ViewData["CodEstadoEnvio"] = new SelectList(_context.TdcCatEstadosEnvioPedidos, "CodEstadoEnvio", "DesEstadoEnvio");
+                ViewData["CodEstadoPago"] = new SelectList(_context.TdcCatEstadosPagoPedidos, "CodEstadoPago", "DesEstadoPago");
+                ViewData["CodLinea"] = new SelectList(_context.TdcCatLineasDistribucions, "CodLinea", "CodLinea");
+                return Page();
+            }catch (Exception ex)
+            {
+                return Redirect("../Error");
+            }
+
+           
         }
 
 
@@ -35,17 +44,27 @@ namespace CSPharma_FinalVersion.Pages.VistasPedido
         // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD
         public async Task<IActionResult> OnPostAsync()
         {
-          if (!ModelState.IsValid)
+            try
             {
-                return Page();
+                if (!ModelState.IsValid)
+                {
+                    return Page();
+                }
+                //Asignamos mdUuid y mdDate
+                TdcTchEstadoPedido.MdUuid = Guid.NewGuid().ToString();
+                TdcTchEstadoPedido.MdDate = DateTime.Now;
+                //A;adimos el pedido
+                _context.TdcTchEstadoPedidos.Add(TdcTchEstadoPedido);
+                //Guardamos cambios
+                await _context.SaveChangesAsync();
+
+                return RedirectToPage("./Index");
+
+            }catch (Exception ex)
+            {
+                return Redirect("../Error");
             }
-
-            TdcTchEstadoPedido.MdUuid = Guid.NewGuid().ToString();
-            TdcTchEstadoPedido.MdDate = DateTime.Now;
-            _context.TdcTchEstadoPedidos.Add(TdcTchEstadoPedido);
-            await _context.SaveChangesAsync();
-
-            return RedirectToPage("./Index");
+         
         }
     }
 }

@@ -22,21 +22,29 @@ namespace CSPharma_FinalVersion.Pages.VistasPedido
 
         public async Task<IActionResult> OnGetAsync(long? id)
         {
-            if (id == null || _context.TdcTchEstadoPedidos == null)
+            try
             {
-                return NotFound();
-            }
-
-            var tdctchestadopedido = await _context.TdcTchEstadoPedidos.FirstOrDefaultAsync(m => m.Id == id);
-            if (tdctchestadopedido == null)
+                //Comprobamos que el pedido exista
+                if (id == null || _context.TdcTchEstadoPedidos == null)
+                {
+                    return NotFound();
+                }
+                //Obtenemos sus datos
+                var tdctchestadopedido = await _context.TdcTchEstadoPedidos.FirstOrDefaultAsync(m => m.Id == id);
+                if (tdctchestadopedido == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    TdcTchEstadoPedido = tdctchestadopedido;
+                }
+                return Page();
+            }catch (Exception ex)
             {
-                return NotFound();
+                return Redirect("../Error");
             }
-            else 
-            {
-                TdcTchEstadoPedido = tdctchestadopedido;
             }
-            return Page();
-        }
+           
     }
 }
